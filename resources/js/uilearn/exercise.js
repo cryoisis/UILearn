@@ -1,5 +1,6 @@
 import { $, $$, readJson, escapeHtml } from './helpers.js';
 import { createChat } from './chat.js';
+import { createLimiter, fmtClock } from './limiter.js';
 
 const LABEL = { mudah: 'Mudah', sedang: 'Sedang' };
 
@@ -150,20 +151,86 @@ export function initExercise() {
             if (e.key === 'Escape' && openBtn.getAttribute('aria-expanded') === 'true') setOpen(false);
         });
 
-        if (data.aiAllowed) {
-            const chat = createChat({
-                log: $('#ai-log'),
+        if (data.canAsk) {
+            const logEl = $('#ai-log');
+            const inputEl = $('#ai-input');
+            const sendEl = $('#ai-send');
+            const chipEls = $$('#ai-chips [data-q]');
+
+            /* Free: dibatasi + jeda 30 menit. Pro: tanpa batas. */
+            let chat = null;
+            let limiter = null;
+
+            if (!data.isPro) {
+                const dots = $('#ai-dots');
+                const lockBox = $('#ai-lock');
+                const countdown = $('#ai-countdown');
+                const readyAt = $('#ai-ready-at');
+                const lockBar = $('#ai-lock-bar');
+                const status = $('#ai-status');
+                const badge = $('#ai-open-badge');
+                const side = $('#ai-side-status');
+
+                const paint = (snap, ev) => {
+                    const clock = fmtClock(snap.msLeft);
+                    status.textContent = snap.locked
+                        ? `Free · dijeda, aktif lagi pukul ${snap.readyAt}`
+                        : `Free · sisa ${snap.remaining} dari ${snap.max} pesan`;
+                    if (badge) badge.textContent = snap.locked ? clock : `${snap.remaining}/${snap.max}`;
+                    if (side)
+                        side.textContent = snap.locked
+                            ? `Dijeda ${clock} · bisa dipakai lagi pukul ${snap.readyAt}`
+                            : `Sisa ${snap.remaining} dari ${snap.max} pesan`;
+                    if (dots)
+                        dots.innerHTML = Array.from({ length: snap.max }, (_, i) =>
+                            `<span class="h-2 w-2 rounded-full ${i < snap.remaining ? 'bg-[#363B6C] dark:bg-[#C6C9E7]' : 'bg-[#363B6C]/15 dark:bg-[#EAEDFE]/20'}"></span>`,
+                        ).join('');
+                    lockBox.classList.toggle('hidden', !snap.locked);
+                    if (snap.locked) {
+                        countdown.textContent = clock;
+                        readyAt.textContent = snap.readyAt;
+                        const done = 1 - snap.msLeft / snap.totalMs;
+                        lockBar.style.width = `${Math.min(100, Math.max(0, done * 100))}%`;
+                    }
+                    inputEl.disabled = snap.locked;
+                    sendEl.disabled = snap.locked;
+                    chipEls.forEach((c) => (c.disabled = snap.locked));
+                    inputEl.placeholder = snap.locked
+                        ? `Dijeda. Bisa bertanya lagi pukul ${snap.readyAt}`
+                        : 'Tanyakan soal ini…';
+                    if (ev.justUnlocked && chat) {
+                        chat.bubble(
+                            'assistant',
+                            '<p><strong>Jeda selesai.</strong> Kuota pesan Anda sudah terisi penuh lagi. Silakan bertanya.</p>',
+                        );
+                        inputEl.focus();
+                    }
+                };
+
+                limiter = createLimiter({
+                    max: data.limit.max,
+                    cooldownMin: data.limit.cooldownMin,
+                    userId: data.userId,
+                    onChange: paint,
+                });
+            }
+
+            chat = createChat({
+                log: logEl,
                 form: $('#ai-form'),
-                input: $('#ai-input'),
-                send: $('#ai-send'),
-                chips: $$('#ai-chips [data-q]'),
-                status: $('#ai-status'),
+                input: inputEl,
+                send: sendEl,
+                chips: chipEls,
+                status: data.isPro ? $('#ai-status') : null,
                 source: 'exercise',
+                limiter,
                 getContext: () => panelContext,
-                greeting:
-                    'Bingung dengan soal ini? Tanyakan konsepnya. Saya akan memberi **petunjuk**, bukan langsung jawabannya.',
+                greeting: data.isPro
+                    ? 'Bingung dengan soal ini? Tanyakan konsepnya. Saya akan memberi **petunjuk**, bukan langsung jawabannya.'
+                    : `Bingung dengan soal ini? Tanyakan konsepnya. Saya akan memberi **petunjuk**, bukan langsung jawabannya.\n\nPaket Free: **${data.limit.max} pesan**, lalu AI dijeda **${data.limit.cooldownMin} menit**.`,
             });
             chat.greet();
+            limiter?.start();
         }
     }
 }

@@ -17,9 +17,9 @@
     const waves = [];
     const pointer = { x: -9999, y: -9999, active: false };
 
-    function restingGlyph(c, r) {
-        if ((c + r * 2) % 9 === 0) return 'o';
-        if ((c * 3 + r) % 13 === 0) return '>';
+    /* Kondisi diam: hanya garis "-----". Simbol ">" dan "o" baru muncul
+       sesaat ketika gelombang (klik / kursor) melewati titik. */
+    function restingGlyph() {
         return '-';
     }
 
@@ -34,7 +34,7 @@
                 points.push({
                     x: offsetX + c * gap,
                     y: offsetY + r * gap,
-                    g: restingGlyph(c, r),
+                    g: restingGlyph(),
                     dx: 0,
                     dy: 0,
                     e: 0,
@@ -67,8 +67,8 @@
             if ((now - waves[i].t) / 1000 > WAVE_LIFE) waves.splice(i, 1);
         }
 
-        const base = isDark ? '#A8A3E3' : '#363B6C';
-        const baseAlpha = isDark ? 0.35 : 0.3;
+        const base = isDark ? '#C6C9E7' : '#363B6C';
+        const baseAlpha = isDark ? 0.3 : 0.26;
         const animate = !reduceMotion.matches;
 
         for (const p of points) {
@@ -116,8 +116,8 @@
             const e = Math.min(1, p.e);
             const glyph = e > 0.55 ? '>' : e > 0.22 ? 'o' : p.g;
             const hot = e > 0.5;
-            ctx.fillStyle = hot ? '#A8A3E3' : base;
-            ctx.globalAlpha = hot ? 0.4 + 0.5 * e : baseAlpha + e * 0.4;
+            ctx.fillStyle = hot ? (isDark ? '#EAEDFE' : '#363B6C') : base;
+            ctx.globalAlpha = hot ? 0.45 + 0.5 * e : baseAlpha + e * 0.4;
 
             const x = p.x + p.dx;
             const y = p.y + p.dy;

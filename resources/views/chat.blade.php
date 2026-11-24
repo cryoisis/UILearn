@@ -19,7 +19,7 @@
     <div class="glass flex h-[calc(100svh-12rem)] min-h-[500px] flex-col overflow-hidden">
       <div class="flex items-center justify-between gap-3 border-b border-[#363B6C]/10 px-4 py-3 dark:border-[#EAEDFE]/10 sm:px-5">
         <div class="min-w-0">
-          <p id="chat-status" class="truncate font-mono text-[11px] font-semibold uppercase tracking-wider text-[#5a54a8] dark:text-[#a8a3e3]">
+          <p id="chat-status" class="truncate font-mono text-[11px] font-semibold uppercase tracking-wider text-[#363B6C] dark:text-[#C6C9E7]">
             @if (auth()->user()->isPro()) Pro · tanpa batas pesan @else Free · sisa {{ $remaining }} pesan hari ini @endif
           </p>
         </div>
@@ -54,19 +54,19 @@
         <p class="eyebrow">Topik Konsultasi</p>
         <div class="mt-3 space-y-3 text-xs leading-relaxed">
           <div class="glass-recessed p-3">
-            <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">📐 Tata Letak &amp; Proporsi</p>
+            <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">📐 Tata Letak &amp; Proporsi</p>
             <p class="muted mt-1">
               "Bagaimana cara membagi kolom pada layar 1200px dengan Golden Ratio 1,62?"
             </p>
           </div>
           <div class="glass-recessed p-3">
-            <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">🎯 Rule of Thirds</p>
+            <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">🎯 Rule of Thirds</p>
             <p class="muted mt-1">
               "Di mana sebaiknya saya meletakkan formulir login dan tombol CTA utama?"
             </p>
           </div>
           <div class="glass-recessed p-3">
-            <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">👁️ Keterbacaan Optimal</p>
+            <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">👁️ Keterbacaan Optimal</p>
             <p class="muted mt-1">
               "Berapa ukuran font dan line-height ideal untuk panjang teks 70 karakter?"
             </p>

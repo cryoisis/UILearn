@@ -44,7 +44,7 @@
             @endforeach
           </div>
           @if (!empty($s['tip']))
-            <aside class="glass-recessed mt-6 border-l-4 border-l-[#A8A3E3] p-4 text-sm leading-relaxed">
+            <aside class="glass-recessed mt-6 border-l-4 border-l-[#C6C9E7] p-4 text-sm leading-relaxed">
               <strong>💡 Tips:</strong> {{ $s['tip'] }}
             </aside>
           @endif
@@ -57,7 +57,7 @@
         <div class="mt-4 divide-y divide-[#363B6C]/10 dark:divide-[#EAEDFE]/10">
           @foreach ($course['faq'] as $f)
             <details class="group py-3.5">
-              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]">
                 <span>{{ $f['q'] }}</span>
                 <span aria-hidden="true" class="accent font-mono transition group-open:rotate-45">+</span>
               </summary>
@@ -88,13 +88,13 @@
         <ol class="mt-3 space-y-2 text-sm">
           @foreach ($course['sections'] as $i => $s)
             <li>
-              <a class="block truncate rounded px-2 py-1 transition hover:bg-[#363B6C]/5 hover:text-[#A8A3E3] dark:hover:bg-[#EAEDFE]/10" href="#bagian-{{ $i + 1 }}">
+              <a class="block truncate rounded px-2 py-1 transition hover:bg-[#363B6C]/5 hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7] dark:hover:bg-[#EAEDFE]/10" href="#bagian-{{ $i + 1 }}">
                 {{ $s['title'] }}
               </a>
             </li>
           @endforeach
           <li>
-            <a class="block rounded px-2 py-1 transition hover:bg-[#363B6C]/5 hover:text-[#A8A3E3] dark:hover:bg-[#EAEDFE]/10" href="#faq">
+            <a class="block rounded px-2 py-1 transition hover:bg-[#363B6C]/5 hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7] dark:hover:bg-[#EAEDFE]/10" href="#faq">
               Tanya Jawab (FAQ)
             </a>
           </li>
@@ -114,10 +114,10 @@
         <div class="mt-3 space-y-2">
           <label for="calc-total" class="block font-mono text-[11px]">Total Lebar (px):</label>
           <input id="calc-total" type="number" value="960" min="320" max="2560" step="10"
-            class="glass-recessed w-full px-3 py-1.5 font-mono text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]">
+            class="glass-recessed w-full px-3 py-1.5 font-mono text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]">
           
           <div class="grid grid-cols-2 gap-2 pt-1 font-mono text-xs">
-            <div class="rounded bg-[#363B6C] p-2 text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">
+            <div class="rounded bg-[#363B6C] p-2 text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">
               <div class="text-[10px] opacity-75">Konten Utama (/ 1.62):</div>
               <div id="calc-main" class="text-base font-bold">593px</div>
             </div>
@@ -149,15 +149,15 @@
         <div class="mt-4 border-t border-[#363B6C]/10 pt-3 text-[11px] dark:border-[#EAEDFE]/10">
           <div class="muted">Alat bantu online:</div>
           <div class="mt-1 flex flex-col gap-1 font-mono">
-            <a href="https://www.thismanslife.co.uk/phiculator" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#A8A3E3]">Phiculator Calculator ↗</a>
-            <a href="https://www.atrise.com/golden-section/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#A8A3E3]">Golden Section Ratio Tool ↗</a>
+            <a href="https://www.thismanslife.co.uk/phiculator" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7]">Phiculator Calculator ↗</a>
+            <a href="https://www.atrise.com/golden-section/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7]">Golden Section Ratio Tool ↗</a>
           </div>
         </div>
       </div>
 
       {{-- Rule of Thirds Mini Map --}}
       <div class="glass-recessed p-4 text-xs">
-        <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">📐 Rule of Thirds</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">📐 Rule of Thirds</p>
         <p class="muted mt-1 leading-relaxed">
           Bagi bidang jadi 9 kotak. Perpotongan <strong>kiri atas</strong> adalah titik paling kuat bagi mata karena pola baca huruf F.
         </p>
@@ -165,7 +165,7 @@
 
       {{-- Tombol Latihan --}}
       <div class="glass p-5 text-center">
-        <p class="text-xs font-semibold uppercase tracking-wider text-[#5a54a8] dark:text-[#a8a3e3]">Uji Pemahaman</p>
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#363B6C] dark:text-[#C6C9E7]">Uji Pemahaman</p>
         <p class="muted mt-1 text-xs">10 soal latihan (5 mudah &amp; 5 sedang).</p>
         <a href="{{ route('exercise', $slug) }}" data-ripple class="btn-primary mt-3 w-full">
           @guest Masuk untuk Latihan @else Mulai Latihan @endguest

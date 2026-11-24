@@ -20,12 +20,12 @@
 
   @if ($status === 'upgraded')
     <div role="status" class="glass flex items-center gap-3 px-5 py-3 text-sm">
-      <span class="h-2 w-2 rounded-full bg-[#A8A3E3]"></span>
+      <span class="h-2 w-2 rounded-full bg-[#C6C9E7]"></span>
       <span>Selamat! Akun Anda sekarang berstatus <strong>Pro</strong>. Nikmati AI Chat tanpa batas.</span>
     </div>
   @elseif ($status === 'downgraded')
     <div role="status" class="glass flex items-center gap-3 px-5 py-3 text-sm">
-      <span class="h-2 w-2 rounded-full bg-[#A8A3E3]"></span>
+      <span class="h-2 w-2 rounded-full bg-[#C6C9E7]"></span>
       <span>Akun Anda telah dikembalikan ke paket <strong>Free</strong>.</span>
     </div>
   @endif
@@ -33,7 +33,7 @@
   {{-- Dua Kartu Harga --}}
   <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
     {{-- Free --}}
-    <article class="glass flex flex-col justify-between p-6 sm:p-8 {{ $current === 'free' ? 'ring-2 ring-[#A8A3E3]' : '' }}" aria-labelledby="plan-free">
+    <article class="glass flex flex-col justify-between p-6 sm:p-8 {{ $current === 'free' ? 'ring-2 ring-[#C6C9E7]' : '' }}" aria-labelledby="plan-free">
       <div>
         <div class="flex items-center justify-between">
           <h2 id="plan-free" class="text-2xl font-bold tracking-tight">Free</h2>
@@ -74,7 +74,7 @@
     </article>
 
     {{-- Pro --}}
-    <article class="glass relative flex flex-col justify-between p-6 sm:p-8 {{ $current === 'pro' ? 'ring-2 ring-[#A8A3E3]' : 'border-[#A8A3E3]' }}" aria-labelledby="plan-pro">
+    <article class="glass relative flex flex-col justify-between p-6 sm:p-8 {{ $current === 'pro' ? 'ring-2 ring-[#C6C9E7]' : 'border-[#C6C9E7]' }}" aria-labelledby="plan-pro">
       <div>
         <div class="flex items-center justify-between">
           <h2 id="plan-pro" class="text-2xl font-bold tracking-tight">Pro</h2>
@@ -98,7 +98,7 @@
           </li>
           <li class="flex items-start gap-2.5">
             <span class="accent font-bold" aria-hidden="true">✓</span>
-            <span>Bantuan AI langsung di halaman kuis latihan (petunjuk &amp; konsep)</span>
+            <span>Bantuan AI di halaman kuis latihan tanpa batas dan tanpa jeda (Free: {{ config('uilearn.plans.free.exercise_ai_messages', 5) }} pesan lalu jeda 30 menit)</span>
           </li>
           <li class="flex items-start gap-2.5">
             <span class="accent font-bold" aria-hidden="true">✓</span>
@@ -132,29 +132,29 @@
             <tr class="border-b border-[#363B6C]/10 font-mono text-[11px] uppercase tracking-wider dark:border-[#EAEDFE]/10">
               <th class="px-6 py-3 font-medium"><span class="sr-only">Fitur</span></th>
               <th class="px-6 py-3 font-medium">Free</th>
-              <th class="bg-[#A8A3E3]/20 px-6 py-3 font-medium">Pro</th>
+              <th class="bg-[#C6C9E7]/20 px-6 py-3 font-medium">Pro</th>
             </tr>
           </thead>
           <tbody class="[&_tr]:border-b [&_tr]:border-[#363B6C]/10 dark:[&_tr]:border-[#EAEDFE]/10 [&_tr:last-child]:border-b-0">
             <tr>
               <th scope="row" class="px-6 py-3.5 font-semibold">Materi &amp; FAQ Lengkap</th>
               <td class="px-6 py-3.5">Ya</td>
-              <td class="bg-[#A8A3E3]/20 px-6 py-3.5 font-medium">Ya</td>
+              <td class="bg-[#C6C9E7]/20 px-6 py-3.5 font-medium">Ya</td>
             </tr>
             <tr>
               <th scope="row" class="px-6 py-3.5 font-semibold">Kuis 10 Soal per Topik</th>
               <td class="px-6 py-3.5">Ya</td>
-              <td class="bg-[#A8A3E3]/20 px-6 py-3.5 font-medium">Ya</td>
+              <td class="bg-[#C6C9E7]/20 px-6 py-3.5 font-medium">Ya</td>
             </tr>
             <tr>
               <th scope="row" class="px-6 py-3.5 font-semibold">AI Chat Harian</th>
               <td class="px-6 py-3.5">{{ $freeLimit }} pesan/hari</td>
-              <td class="bg-[#A8A3E3]/20 px-6 py-3.5 font-semibold">Tanpa batas</td>
+              <td class="bg-[#C6C9E7]/20 px-6 py-3.5 font-semibold">Tanpa batas</td>
             </tr>
             <tr>
               <th scope="row" class="px-6 py-3.5 font-semibold">AI saat Mengerjakan Soal</th>
-              <td class="px-6 py-3.5">–</td>
-              <td class="bg-[#A8A3E3]/20 px-6 py-3.5 font-semibold">Tersedia</td>
+              <td class="px-6 py-3.5">{{ config('uilearn.plans.free.exercise_ai_messages', 5) }} pesan, lalu jeda 30 menit</td>
+              <td class="bg-[#C6C9E7]/20 px-6 py-3.5 font-semibold">Tanpa batas</td>
             </tr>
           </tbody>
         </table>
@@ -194,7 +194,7 @@
     <form method="POST" action="{{ route('subscription.downgrade') }}" class="p-6">
       @csrf
       <h2 id="down-title" class="text-lg font-semibold">Kembali ke Free?</h2>
-      <p class="muted mt-2 text-sm">AI Chat akan dibatasi {{ $freeLimit }} pesan per hari dan bantuan AI saat latihan dinonaktifkan.</p>
+      <p class="muted mt-2 text-sm">AI Chat akan dibatasi {{ $freeLimit }} pesan per hari dan bantuan AI saat latihan dibatasi {{ config('uilearn.plans.free.exercise_ai_messages', 5) }} pesan, lalu jeda 30 menit.</p>
       <div class="mt-6 flex justify-end gap-2">
         <button type="button" class="btn-secondary" data-close>Batal</button>
         <button type="submit" class="btn-primary">Ya, kembali ke Free</button>

@@ -22,7 +22,7 @@
       </div>
 
       <div class="glass-recessed mt-6 space-y-2 p-4 text-xs leading-relaxed">
-        <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">🎯 Keuntungan Bergabung</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">🎯 Keuntungan Bergabung</p>
         <ul class="muted space-y-1">
           <li>✓ Pelajari Divine Proportion (Golden Ratio 1:1,618)</li>
           <li>✓ Kuasai penempatan elemen dengan Rule of Thirds</li>
@@ -38,25 +38,25 @@
       <p class="muted prose-optimal mt-1 text-xs">Lengkapi data diri singkat Anda untuk memulai pembelajaran.</p>
 
       <label for="name" class="mt-4 block text-xs font-medium">Nama Lengkap</label>
-      <input id="name" name="name" type="text" autocomplete="name" autofocus value="{{ old('name') }}" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
+      <input id="name" name="name" type="text" autocomplete="name" autofocus value="{{ old('name') }}" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]" required>
       @error('name')<p class="mt-1 text-xs text-[#9b2c4a] dark:text-[#ffb3c4]">{{ $message }}</p>@enderror
 
       <label for="email" class="mt-3.5 block text-xs font-medium">Alamat Email</label>
-      <input id="email" name="email" type="email" autocomplete="email" value="{{ old('email') }}" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
+      <input id="email" name="email" type="email" autocomplete="email" value="{{ old('email') }}" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]" required>
       @error('email')<p class="mt-1 text-xs text-[#9b2c4a] dark:text-[#ffb3c4]">{{ $message }}</p>@enderror
 
       <label for="password" class="mt-3.5 block text-xs font-medium">Password</label>
-      <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
+      <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]" required>
       @error('password')<p class="mt-1 text-xs text-[#9b2c4a] dark:text-[#ffb3c4]">{{ $message }}</p>@enderror
 
       <label for="password_confirmation" class="mt-3.5 block text-xs font-medium">Konfirmasi Password</label>
-      <input id="password_confirmation" name="password_confirmation" type="password" autocomplete="new-password" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
+      <input id="password_confirmation" name="password_confirmation" type="password" autocomplete="new-password" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]" required>
       @error('password_confirmation')<p class="mt-1 text-xs text-[#9b2c4a] dark:text-[#ffb3c4]">{{ $message }}</p>@enderror
 
       <button type="submit" data-ripple class="btn-primary mt-6 w-full">Daftar Akun Gratis</button>
 
       <p class="muted mt-5 text-center text-xs">
-        Sudah memiliki akun? <a href="{{ route('login') }}" class="font-semibold text-[#363B6C] underline underline-offset-2 hover:text-[#A8A3E3] dark:text-[#EAEDFE]">Sign in di sini</a>
+        Sudah memiliki akun? <a href="{{ route('login') }}" class="font-semibold text-[#363B6C] underline underline-offset-2 hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7] dark:text-[#EAEDFE]">Sign in di sini</a>
       </p>
     </form>
   </div>

@@ -43,33 +43,33 @@
         </div>
         
         {{-- Visual Grid 3x3 Rule of Thirds dengan Titik Temu Kiri Atas --}}
-        <div class="mt-4 grid grid-cols-3 gap-1.5 rounded-lg border border-[#A8A3E3]/40 bg-[#363B6C]/5 p-2 dark:bg-[#EAEDFE]/5">
-          <div class="relative flex h-14 items-center justify-center rounded border border-dashed border-[#A8A3E3]/50 bg-[#A8A3E3]/20 text-center font-mono text-[10px] font-semibold text-[#5a54a8] dark:text-[#eaedfe]">
-            <span class="absolute -bottom-1 -right-1 h-3 w-3 rounded-full bg-[#363B6C] ring-2 ring-[#A8A3E3] dark:bg-[#A8A3E3]" title="Titik Fokus Kiri Atas (Pola F)"></span>
+        <div class="mt-4 grid grid-cols-3 gap-1.5 rounded-lg border border-[#C6C9E7]/40 bg-[#363B6C]/5 p-2 dark:bg-[#EAEDFE]/5">
+          <div class="relative flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/50 bg-[#C6C9E7]/20 text-center font-mono text-[10px] font-semibold text-[#363B6C] dark:text-[#eaedfe]">
+            <span class="absolute -bottom-1 -right-1 h-3 w-3 rounded-full bg-[#363B6C] ring-2 ring-[#C6C9E7] dark:bg-[#C6C9E7]" title="Titik Fokus Kiri Atas (Pola F)"></span>
             Fokus Utama (Pola F)
           </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#A8A3E3]/30 text-center font-mono text-[10px] opacity-70">
+          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
             Navigasi
           </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#A8A3E3]/30 text-center font-mono text-[10px] opacity-70">
+          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
             Aksi Kanan
           </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#A8A3E3]/30 text-center font-mono text-[10px] opacity-70">
+          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
             Konten
           </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#A8A3E3]/30 text-center font-mono text-[10px] opacity-70">
+          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
             Pusat
           </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#A8A3E3]/30 text-center font-mono text-[10px] opacity-70">
+          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
             Sidebar
           </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#A8A3E3]/30 text-center font-mono text-[10px] opacity-70">
+          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
             Dukungan
           </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#A8A3E3]/30 text-center font-mono text-[10px] opacity-70">
+          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
             Status
           </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#A8A3E3]/30 text-center font-mono text-[10px] opacity-70">
+          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
             Footer
           </div>
         </div>
@@ -81,7 +81,7 @@
             <span class="font-semibold">960 / 1,62</span>
           </div>
           <div class="grid grid-cols-[1.618fr_1fr] gap-1 text-[11px]">
-            <div class="rounded bg-[#363B6C] px-2 py-1 text-center font-semibold text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">
+            <div class="rounded bg-[#363B6C] px-2 py-1 text-center font-semibold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">
               Konten ~593px (61,8%)
             </div>
             <div class="rounded border border-[#363B6C]/25 px-2 py-1 text-center dark:border-[#EAEDFE]/25">
@@ -93,8 +93,8 @@
         <div class="mt-4 flex items-center justify-between border-t border-[#363B6C]/10 pt-3 text-[11px] dark:border-[#EAEDFE]/10">
           <span class="muted">Alat bantu hitung:</span>
           <div class="flex gap-2">
-            <a href="https://www.thismanslife.co.uk/phiculator" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-[#A8A3E3]">Phiculator ↗</a>
-            <a href="https://www.atrise.com/golden-section/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-[#A8A3E3]">Golden Section ↗</a>
+            <a href="https://www.thismanslife.co.uk/phiculator" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7]">Phiculator ↗</a>
+            <a href="https://www.atrise.com/golden-section/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7]">Golden Section ↗</a>
           </div>
         </div>
       </div>
@@ -116,13 +116,13 @@
     {{-- Pilar 1 --}}
     <article class="glass flex flex-col p-6 sm:p-7">
       <div class="flex items-center gap-3">
-        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">01</span>
+        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">01</span>
         <h3 class="text-xl font-semibold tracking-tight">Jelas dan Intuitif</h3>
       </div>
       <p class="muted prose-optimal mt-4 flex-1 text-sm leading-relaxed">
         Desain yang efektif tidak harus selalu penuh warna atau terlihat cantik, melainkan mudah dipahami dan memberikan rasa keteraturan serta kenyamanan alami bagi pengunjung.
       </p>
-      <div class="glass-recessed mt-5 p-3 font-mono text-xs text-[#5a54a8] dark:text-[#a8a3e3]">
+      <div class="glass-recessed mt-5 p-3 font-mono text-xs text-[#363B6C] dark:text-[#C6C9E7]">
         Kunci: Hirarki visual tegas tanpa elemen visual yang bersaing.
       </div>
     </article>
@@ -130,13 +130,13 @@
     {{-- Pilar 2 --}}
     <article class="glass flex flex-col p-6 sm:p-7">
       <div class="flex items-center gap-3">
-        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">02</span>
+        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">02</span>
         <h3 class="text-xl font-semibold tracking-tight">Keterbacaan Optimal</h3>
       </div>
       <p class="muted prose-optimal mt-4 flex-1 text-sm leading-relaxed">
         Ukuran tata letak yang proporsional akan membantu menjaga panjang baris teks tetap ideal, yaitu sekitar <strong>60 hingga 80 karakter per baris</strong>, sehingga nyaman dibaca tanpa melelahkan mata.
       </p>
-      <div class="glass-recessed mt-5 p-3 font-mono text-xs text-[#5a54a8] dark:text-[#a8a3e3]">
+      <div class="glass-recessed mt-5 p-3 font-mono text-xs text-[#363B6C] dark:text-[#C6C9E7]">
         Ideal: Rentang 60–80 karakter · Line-height 1,5–1,7.
       </div>
     </article>
@@ -144,13 +144,13 @@
     {{-- Pilar 3 --}}
     <article class="glass flex flex-col p-6 sm:p-7">
       <div class="flex items-center gap-3">
-        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">03</span>
+        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">03</span>
         <h3 class="text-xl font-semibold tracking-tight">Keseimbangan Struktural</h3>
       </div>
       <p class="muted prose-optimal mt-4 flex-1 text-sm leading-relaxed">
         Meskipun tidak selalu mengikuti rasio matematis secara kaku, tata letak yang menjaga proporsi konsisten antara blok utama dan ruang kosong (white space) di sekitarnya akan terasa seimbang dan rapi.
       </p>
-      <div class="glass-recessed mt-5 p-3 font-mono text-xs text-[#5a54a8] dark:text-[#a8a3e3]">
+      <div class="glass-recessed mt-5 p-3 font-mono text-xs text-[#363B6C] dark:text-[#C6C9E7]">
         Prinsip: White space memberi nafas pada konten utama.
       </div>
     </article>
@@ -177,7 +177,7 @@
           <p class="muted">
             Bagi total lebar tata letak dengan <strong>1,62</strong> untuk mendapatkan ukuran area konten utama, lalu sisanya digunakan untuk sidebar.
           </p>
-          <div class="rounded-md border border-[#363B6C]/10 bg-white/40 p-3 font-mono text-xs dark:border-[#EAEDFE]/10 dark:bg-black/20">
+          <div class="rounded-md border border-[#363B6C]/10 bg-[#EAEDFE]/40 p-3 font-mono text-xs dark:border-[#EAEDFE]/10 dark:bg-[#363B6C]/40">
             Contoh pada lebar 960px:<br>
             • Konten Utama = 960px / 1,62 ≈ <strong>593px</strong><br>
             • Sisa Sidebar = 960px - 593px = <strong>367px</strong>
@@ -226,7 +226,7 @@
         </ul>
       </div>
 
-      <div class="glass-recessed mt-6 border-l-4 border-l-[#A8A3E3] p-3 text-xs leading-relaxed">
+      <div class="glass-recessed mt-6 border-l-4 border-l-[#C6C9E7] p-3 text-xs leading-relaxed">
         <strong>Tips Cepat:</strong> Tempatkan Logo dan Call-to-Action terpenting pada perpotongan garis sepertiga atas kiri.
       </div>
     </div>
@@ -304,17 +304,17 @@
         <span class="badge badge-pro">Sesudah</span>
         <span class="muted text-xs">Proporsional, seimbang, mudah dipindai</span>
       </figcaption>
-      <div class="rounded-lg bg-white p-6 text-[#1f2347]" role="img" aria-label="Contoh formulir pendaftaran yang rapi: satu warna aksen, hierarki jelas, jarak konsisten, satu tombol utama">
-        <p class="text-xs font-semibold uppercase tracking-wider text-[#5a54a8]">Daftar Akun</p>
+      <div class="rounded-lg border border-[#363B6C]/15 bg-[#EAEDFE] p-6 text-[#363B6C]" role="img" aria-label="Contoh formulir pendaftaran yang rapi: satu warna aksen, hierarki jelas, jarak konsisten, satu tombol utama">
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#363B6C]">Daftar Akun</p>
         <p class="mt-1 text-2xl font-bold leading-tight">Buat akun Anda</p>
-        <p class="mt-2 text-sm leading-6 text-[#4b5078]">Terapkan Golden Ratio dan keterbacaan teks ideal.</p>
+        <p class="mt-2 text-sm leading-6 text-[#363B6C]/80">Terapkan Golden Ratio dan keterbacaan teks ideal.</p>
         <div class="mt-5 grid grid-cols-2 gap-3">
-          <div class="rounded-md border border-[#c9cdf0] px-3 py-2 text-sm text-[#4b5078]">Nama</div>
-          <div class="rounded-md border border-[#c9cdf0] px-3 py-2 text-sm text-[#4b5078]">Email</div>
+          <div class="rounded-md border border-[#C6C9E7] px-3 py-2 text-sm text-[#363B6C]/80">Nama</div>
+          <div class="rounded-md border border-[#C6C9E7] px-3 py-2 text-sm text-[#363B6C]/80">Email</div>
         </div>
         <div class="mt-4 flex items-center gap-3">
-          <span class="rounded-md bg-[#363B6C] px-5 py-2 text-sm font-semibold text-white">Daftar</span>
-          <span class="text-sm text-[#4b5078] underline underline-offset-2">Batal</span>
+          <span class="rounded-md bg-[#363B6C] px-5 py-2 text-sm font-semibold text-[#EAEDFE]">Daftar</span>
+          <span class="text-sm text-[#363B6C]/80 underline underline-offset-2">Batal</span>
         </div>
       </div>
     </figure>
@@ -342,7 +342,7 @@
   </div>
   <div class="rule-of-thirds-grid">
     @foreach ($courses as $slug => $c)
-      <a href="{{ route('lesson', $slug) }}" class="glass group flex flex-col p-6 transition hover:border-[#A8A3E3] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]">
+      <a href="{{ route('lesson', $slug) }}" class="glass group flex flex-col p-6 transition hover:border-[#C6C9E7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]">
         <div class="flex items-center justify-between">
           <span class="accent font-mono text-3xl" aria-hidden="true">{{ $c['icon'] }}</span>
           <span class="muted font-mono text-xs">{{ $c['duration'] }}</span>
@@ -384,7 +384,7 @@
         <p class="eyebrow">Kenapa jadi member?</p>
         <h2 id="join-title" class="mt-3 text-balance text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">Buka kursus lengkap dan AI Chat.</h2>
         <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
-          Tanpa login Anda bisa membaca materi. Dengan akun gratis Anda bisa mengerjakan latihan dan mencoba AI Chat. Paket Pro membuka AI tanpa batas, termasuk bantuan saat mengerjakan soal.
+          Tanpa login Anda bisa membaca materi. Dengan akun gratis Anda bisa mengerjakan latihan dan mencoba AI Chat. Bantuan AI saat latihan tersedia di paket Free dengan batas pesan dan jeda 30 menit; paket Pro membukanya tanpa batas.
         </p>
         <div class="mt-6 flex flex-col gap-3 sm:flex-row">
           <a href="{{ route('register') }}" class="btn-primary">Daftar gratis</a>
@@ -399,14 +399,14 @@
             <tr class="border-b border-[#363B6C]/10 font-mono text-[11px] uppercase tracking-wider dark:border-[#EAEDFE]/10">
               <th scope="col" class="px-3 py-2.5"><span class="sr-only">Fitur</span></th>
               <th scope="col" class="px-3 py-2.5 font-medium">Free</th>
-              <th scope="col" class="bg-[#A8A3E3]/20 px-3 py-2.5 font-medium">Pro</th>
+              <th scope="col" class="bg-[#C6C9E7]/20 px-3 py-2.5 font-medium">Pro</th>
             </tr>
           </thead>
           <tbody class="[&_tr]:border-b [&_tr]:border-[#363B6C]/10 dark:[&_tr]:border-[#EAEDFE]/10 [&_tr:last-child]:border-b-0">
-            <tr><th scope="row" class="px-3 py-2.5 font-semibold">Materi</th><td class="px-3 py-2.5">Lengkap</td><td class="bg-[#A8A3E3]/20 px-3 py-2.5">Lengkap</td></tr>
-            <tr><th scope="row" class="px-3 py-2.5 font-semibold">Latihan</th><td class="px-3 py-2.5">10 soal/topik</td><td class="bg-[#A8A3E3]/20 px-3 py-2.5">10 soal/topik</td></tr>
-            <tr><th scope="row" class="px-3 py-2.5 font-semibold">AI Chat</th><td class="px-3 py-2.5">{{ config('uilearn.plans.free.daily_ai_messages') }} pesan/hari</td><td class="bg-[#A8A3E3]/20 px-3 py-2.5">Tanpa batas</td></tr>
-            <tr><th scope="row" class="px-3 py-2.5 font-semibold">AI saat latihan</th><td class="px-3 py-2.5">–</td><td class="bg-[#A8A3E3]/20 px-3 py-2.5">Tersedia</td></tr>
+            <tr><th scope="row" class="px-3 py-2.5 font-semibold">Materi</th><td class="px-3 py-2.5">Lengkap</td><td class="bg-[#C6C9E7]/20 px-3 py-2.5">Lengkap</td></tr>
+            <tr><th scope="row" class="px-3 py-2.5 font-semibold">Latihan</th><td class="px-3 py-2.5">10 soal/topik</td><td class="bg-[#C6C9E7]/20 px-3 py-2.5">10 soal/topik</td></tr>
+            <tr><th scope="row" class="px-3 py-2.5 font-semibold">AI Chat</th><td class="px-3 py-2.5">{{ config('uilearn.plans.free.daily_ai_messages') }} pesan/hari</td><td class="bg-[#C6C9E7]/20 px-3 py-2.5">Tanpa batas</td></tr>
+            <tr><th scope="row" class="px-3 py-2.5 font-semibold">AI saat latihan</th><td class="px-3 py-2.5">{{ config('uilearn.plans.free.exercise_ai_messages', 5) }} pesan, lalu jeda 30 menit</td><td class="bg-[#C6C9E7]/20 px-3 py-2.5">Tanpa batas</td></tr>
           </tbody>
         </table>
       </div>

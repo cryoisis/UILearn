@@ -21,7 +21,7 @@ export function createChat(opts) {
         const b = document.createElement('div');
         b.className =
             role === 'user'
-                ? 'max-w-[85%] rounded-xl rounded-br-sm bg-[#363B6C] px-4 py-2.5 text-sm text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]'
+                ? 'max-w-[85%] rounded-xl rounded-br-sm bg-[#363B6C] px-4 py-2.5 text-sm text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]'
                 : 'prose-chat glass-recessed max-w-[92%] px-4 py-3 text-sm leading-relaxed';
         b.innerHTML = html;
         wrap.appendChild(b);
@@ -52,6 +52,7 @@ export function createChat(opts) {
     async function submit(text) {
         text = text.trim();
         if (!text || busy) return;
+        if (opts.limiter && !opts.limiter.canSend()) return; // kuota habis / sedang dijeda
         busy = true;
         send.disabled = true;
         bubble('user', `<p>${escapeHtml(text)}</p>`);
@@ -85,18 +86,26 @@ export function createChat(opts) {
                     data.upgrade,
                 );
                 if ('remaining' in data) setRemaining(data.remaining);
+                if (opts.limiter && res.status === 429) {
+                    const wait = Number(data.retry_after);
+                    opts.limiter.lockFor(wait > 0 ? wait * 1000 : undefined);
+                }
             } else {
                 pending.removeAttribute('aria-busy');
                 await typeInto(pending, data.message.content, { onTick: scroll });
                 setRemaining(data.remaining);
+                if (opts.limiter) {
+                    if (typeof data.remaining === 'number') opts.limiter.sync(data.remaining);
+                    else opts.limiter.consume();
+                }
             }
         } catch {
             pending.parentElement.remove();
             notice('Koneksi bermasalah. Periksa internet Anda lalu coba lagi.');
         } finally {
             busy = false;
-            send.disabled = false;
-            input.focus();
+            send.disabled = opts.limiter ? !opts.limiter.canSend() : false;
+            if (!input.disabled) input.focus();
         }
     }
 

@@ -19,7 +19,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1">
         @foreach ($courses as $slug => $c)
-          <article class="glass flex flex-col p-6 sm:p-7 transition hover:border-[#A8A3E3]">
+          <article class="glass flex flex-col p-6 sm:p-7 transition hover:border-[#C6C9E7]">
             <div class="flex items-start justify-between gap-4">
               <span class="accent font-mono text-3xl" aria-hidden="true">{{ $c['icon'] }}</span>
               <span class="badge {{ $slug === 'tata-letak' ? 'badge-pro' : '' }}">
@@ -70,10 +70,10 @@
         </p>
 
         <div class="glass-recessed mt-4 p-3 text-xs">
-          <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">Rumus Pembagian Kolom:</p>
+          <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Rumus Pembagian Kolom:</p>
           <p class="mt-1 font-mono">Area Utama = Total Lebar / 1,62</p>
           <p class="font-mono">Sidebar = Total Lebar - Area Utama</p>
-          <div class="mt-2 rounded border border-[#363B6C]/10 bg-white/40 p-2 font-mono text-[11px] dark:border-[#EAEDFE]/10 dark:bg-black/20">
+          <div class="mt-2 rounded border border-[#363B6C]/10 bg-[#EAEDFE]/40 p-2 font-mono text-[11px] dark:border-[#EAEDFE]/10 dark:bg-[#363B6C]/40">
             Layout 960px:<br>
             • Utama: 960 / 1,62 ≈ <strong>593px</strong><br>
             • Sidebar: 960 - 593 = <strong>367px</strong>
@@ -106,7 +106,7 @@
 
       {{-- Tips Keterbacaan --}}
       <aside class="glass-recessed p-5 text-xs leading-relaxed">
-        <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">💡 Keterbacaan Optimal</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">💡 Keterbacaan Optimal</p>
         <p class="muted mt-1">
           Jaga panjang baris teks antara <strong>60 hingga 80 karakter per baris</strong>. Jika teks terlalu lebar, mata pembaca kesulitan melompat ke baris baru.
         </p>

@@ -26,9 +26,9 @@
       {{-- Area Samping: Visualisasi Rasio Spasial --}}
       <div class="glass-recessed p-5 text-xs">
         <p class="eyebrow">Proporsi Harmonis</p>
-        <div class="mt-3 aspect-[1.618/1] rounded-lg border border-dashed border-[#A8A3E3]/60 bg-[#363B6C]/5 p-3 dark:bg-[#EAEDFE]/5">
+        <div class="mt-3 aspect-[1.618/1] rounded-lg border border-dashed border-[#C6C9E7]/60 bg-[#363B6C]/5 p-3 dark:bg-[#EAEDFE]/5">
           <div class="grid h-full grid-cols-[1.618fr_1fr] gap-2">
-            <div class="flex flex-col justify-between rounded bg-[#363B6C] p-2 text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">
+            <div class="flex flex-col justify-between rounded bg-[#363B6C] p-2 text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">
               <span class="font-mono text-[10px]">Konten Utama</span>
               <span class="font-mono text-sm font-bold">~61,8%</span>
             </div>
@@ -58,7 +58,7 @@
     <div class="rule-of-thirds-grid">
       <article class="glass p-6">
         <div class="flex items-center gap-3">
-          <span class="flex h-9 w-9 items-center justify-center rounded-md bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">1</span>
+          <span class="flex h-9 w-9 items-center justify-center rounded-md bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">1</span>
           <h3 class="text-lg font-semibold">Jelas dan Intuitif</h3>
         </div>
         <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
@@ -68,7 +68,7 @@
 
       <article class="glass p-6">
         <div class="flex items-center gap-3">
-          <span class="flex h-9 w-9 items-center justify-center rounded-md bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">2</span>
+          <span class="flex h-9 w-9 items-center justify-center rounded-md bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">2</span>
           <h3 class="text-lg font-semibold">Keterbacaan Optimal</h3>
         </div>
         <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
@@ -78,7 +78,7 @@
 
       <article class="glass p-6">
         <div class="flex items-center gap-3">
-          <span class="flex h-9 w-9 items-center justify-center rounded-md bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">3</span>
+          <span class="flex h-9 w-9 items-center justify-center rounded-md bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">3</span>
           <h3 class="text-lg font-semibold">Keseimbangan Struktural</h3>
         </div>
         <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
@@ -103,7 +103,7 @@
           </p>
           <div class="mt-4 space-y-2 text-xs">
             <p><strong>Cara menghitung lebar kolom:</strong> Bagi total lebar tata letak dengan 1,62 untuk mendapatkan ukuran area konten utama, lalu sisanya digunakan untuk sidebar.</p>
-            <div class="rounded border border-[#363B6C]/10 bg-white/50 p-3 font-mono dark:border-[#EAEDFE]/10 dark:bg-black/20">
+            <div class="rounded border border-[#363B6C]/10 bg-[#EAEDFE]/50 p-3 font-mono dark:border-[#EAEDFE]/10 dark:bg-[#363B6C]/40">
               Contoh pada lebar 960px:<br>
               • Konten utama: 960px / 1,62 ≈ <strong>593px</strong><br>
               • Sidebar: 960px - 593px = <strong>367px</strong>
@@ -112,8 +112,8 @@
         </div>
         <div class="mt-4 border-t border-[#363B6C]/10 pt-3 text-xs dark:border-[#EAEDFE]/10">
           <span class="muted">Alat bantu online: </span>
-          <a href="https://www.thismanslife.co.uk/phiculator" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#A8A3E3]">Phiculator</a> &amp;
-          <a href="https://www.atrise.com/golden-section/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#A8A3E3]">Golden Section Ratio Design Tool</a>
+          <a href="https://www.thismanslife.co.uk/phiculator" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7]">Phiculator</a> &amp;
+          <a href="https://www.atrise.com/golden-section/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7]">Golden Section Ratio Design Tool</a>
         </div>
       </div>
 

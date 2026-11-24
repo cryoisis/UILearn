@@ -4,7 +4,7 @@
 
 @section('content')
 @php
-  $input = 'glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]';
+  $input = 'glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]';
   $initials = collect(preg_split('/\s+/', trim($user->name)))->filter()->take(2)->map(fn ($w) => mb_strtoupper(mb_substr($w, 0, 1)))->implode('');
   $status = session('status');
   $isPro = $user->isPro();
@@ -14,7 +14,7 @@
   {{-- Header Profil dengan Fokus Sudut Kiri Atas (F-Pattern) --}}
   <header class="glass f-focal-point overflow-hidden p-6 sm:p-8">
     <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
-      <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[#363B6C] font-mono text-2xl font-bold text-[#EAEDFE] ring-4 ring-[#A8A3E3]/40 dark:bg-[#EAEDFE]/10" aria-hidden="true">
+      <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[#363B6C] font-mono text-2xl font-bold text-[#EAEDFE] ring-4 ring-[#C6C9E7]/40 dark:bg-[#EAEDFE]/10" aria-hidden="true">
         {{ $initials ?: '?' }}
       </div>
       <div class="min-w-0 flex-1">
@@ -30,7 +30,7 @@
 
   @if ($status === 'profile-updated' || $status === 'password-updated')
     <div role="status" class="glass flex items-center gap-3 px-5 py-3 text-sm">
-      <span class="h-2 w-2 shrink-0 rounded-full bg-[#A8A3E3]" aria-hidden="true"></span>
+      <span class="h-2 w-2 shrink-0 rounded-full bg-[#C6C9E7]" aria-hidden="true"></span>
       <span>{{ $status === 'profile-updated' ? 'Nama profil berhasil diperbarui.' : 'Password akun berhasil diubah.' }}</span>
     </div>
   @endif
@@ -114,7 +114,7 @@
       </div>
 
       <div class="glass-recessed p-5 text-xs leading-relaxed">
-        <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">📐 Keseimbangan Struktural</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">📐 Keseimbangan Struktural</p>
         <p class="muted mt-1">
           Tata letak halaman ini menerapkan proporsi konsisten antara blok utama dan ruang kosong di sekitarnya sehingga memberikan rasa keteraturan alami.
         </p>

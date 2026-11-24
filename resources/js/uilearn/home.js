@@ -19,7 +19,7 @@ export function initHomeDemo() {
             );
 
             log.innerHTML = `
-              <div class="flex justify-end"><p class="max-w-[85%] rounded-xl rounded-br-sm bg-[#363B6C] px-4 py-2.5 text-sm text-[#EAEDFE] dark:bg-[#A8A3E3] dark:text-[#363B6C]">${escapeHtml(preset.q)}</p></div>
+              <div class="flex justify-end"><p class="max-w-[85%] rounded-xl rounded-br-sm bg-[#363B6C] px-4 py-2.5 text-sm text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">${escapeHtml(preset.q)}</p></div>
               <div class="flex"><div id="ai-demo-answer" class="prose-chat glass-recessed max-w-[92%] px-4 py-3 text-sm leading-relaxed" aria-live="polite"><span class="muted">AI sedang mengetik…</span></div></div>`;
             await new Promise((r) => setTimeout(r, 350));
             await typeInto($('#ai-demo-answer', log), preset.a);

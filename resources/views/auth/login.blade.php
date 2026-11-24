@@ -22,7 +22,7 @@
       </div>
 
       <div class="glass-recessed mt-6 space-y-2 p-4 text-xs leading-relaxed">
-        <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">📐 Prinsip Desain UIlearn</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">📐 Prinsip Desain UIlearn</p>
         <p class="muted">
           Dibangun dengan <strong>Divine Proportion (1:1,618)</strong> dan <strong>Rule of Thirds</strong> untuk harmoni visual dan kenyamanan membaca maksimal.
         </p>
@@ -36,22 +36,22 @@
       <p class="muted prose-optimal mt-1 text-xs">Gunakan kredensial yang telah didaftarkan sebelumnya.</p>
 
       <label for="email" class="mt-5 block text-xs font-medium">Alamat Email</label>
-      <input id="email" name="email" type="email" autocomplete="email" autofocus value="{{ old('email') }}" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
+      <input id="email" name="email" type="email" autocomplete="email" autofocus value="{{ old('email') }}" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]" required>
       @error('email')<p class="mt-1 text-xs text-[#9b2c4a] dark:text-[#ffb3c4]">{{ $message }}</p>@enderror
 
       <label for="password" class="mt-4 block text-xs font-medium">Password</label>
-      <input id="password" name="password" type="password" autocomplete="current-password" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
+      <input id="password" name="password" type="password" autocomplete="current-password" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7]" required>
       @error('password')<p class="mt-1 text-xs text-[#9b2c4a] dark:text-[#ffb3c4]">{{ $message }}</p>@enderror
 
       <label class="mt-4 flex items-center gap-2 text-xs">
-        <input type="checkbox" name="remember" class="h-4 w-4 accent-[#A8A3E3]">
+        <input type="checkbox" name="remember" class="h-4 w-4 accent-[#C6C9E7]">
         <span>Ingat sesi saya di perangkat ini</span>
       </label>
 
       <button type="submit" data-ripple class="btn-primary mt-6 w-full">Sign in</button>
 
       <p class="muted mt-5 text-center text-xs">
-        Belum memiliki akun? <a href="{{ route('register') }}" class="font-semibold text-[#363B6C] underline underline-offset-2 hover:text-[#A8A3E3] dark:text-[#EAEDFE]">Daftar gratis di sini</a>
+        Belum memiliki akun? <a href="{{ route('register') }}" class="font-semibold text-[#363B6C] underline underline-offset-2 hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7] dark:text-[#EAEDFE]">Daftar gratis di sini</a>
       </p>
     </form>
   </div>

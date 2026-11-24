@@ -7,7 +7,6 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('title', 'UIlearn — Belajar UI/UX untuk Pemula')</title>
   <meta name="description" content="Platform belajar UI/UX untuk pemula: Tata Letak, Warna, dan Typography, lengkap dengan latihan dan AI Chat.">
-  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEJklEQVR4nMVX3UtjRxSfmTu5SVON+TBhW+tCWhpINIU+RHyoJaSI4L9wffHVB+t2ofZF9M0HEdmXCL4usm+CoLAv2u7FQpUuYWPdStLeUhJYVsV8bNT05n6UczcjMc1NbNTdA5eZO3funN/5zTln5mDUQFJSXkd3IIFPnbh+DDdS/Lm/6y70o/RfBVMgCJS/K/kPw6kGyguFQnFtbe0X6Guapqmqqt4FCGJG19LS0vN4PG6BPgAghJjOZcIWL5VKZ1NTU88mJyfFXC6Xb/pTyoT6oaGhFyMjI79CP5vNvpqfn/+RsWFmlaIoCrSbm5t7gAee1dXVn5uxQMyAcRwHugxnsVgsdGZm5qu9vb0DjDGGD43+gW/QBgIBX19f3x/BYFAKh8PeZgTQFpQiBgB2IZVK5QcGBky3BACAZT09PT5BEHbhf7/fH2kbAJMqY8xAUwFHpZTShYWF3dnZ2SiMZbNZMR6Pf30jAExaIqjK0dER4ThOrfb5ZnMpugOhlOqqqnKs32wuuc6CwP+VAeaEus5aveowRltLlKqq+NYZoDz/llaM3xpQ1UgpNfJGPd62GMCNtru68sXjxz9pDx6ktKdPRWP49eusNvXtfvmH7/dRpXJm5fnLQwYCoy0A9SCqUWAM6E+eBEh/f0ArFD4y3g8O/ibSn2Fb7JswurjI8FarzvO8QilVWm0BQf9PDGuoIKTQy5cp4nC8MoCGQvc1/2f78vZWEtlsn1goRbIsU0VRqMfjqdxGHkCGIkIMa3hBiCJBAPQBY/zevV786FEvi7fvHj6MOLq6nlUqFTQ+Ph6+MYB6UcA8cESIAnDES4QY0KJcLlcQBKG/YQTdZAswcwqWhmuioKoFq5qmxWKxis/n88CzuLj4260BuI6Uy+VyqVT6gL07nc72GaCUanDEXkcxo/r4+Dh3enrqJIRoQExHR0dTHaTZcXxycmKHw4UtznGcaUixOZIkHcuyzMNZAKHb2dnZ3EhkIg6HQ97a2vpyYmJCTKfTHQghD6W0KQCQRCJRrHULh8NhaQsAxthIPsvLy5dHaasUC066sbFhXKnZYeT1ei/9oS0ntFqt//A8L9crqn2XISwppaIovhBF8QugH+4s3d3dp6FQqLctALquGzRCNgNrwKnqY5rdlnme5w8PD6WxsTEvsGaxWCrQjo6O/u52u11tAbDb7YYTgTWgHCxyuVy2Kz8TAhcPbn19fTcWi32YyWQ+BtDlctnmdrtzc3Nz91slItOb8c7OTtJut5+x2+3g4OD++fn5uVoj29vbieHh4edsDjwcxynRaDSRTCZTsI5ZPcHqAswANCrHAMTKysobn8+nTE9P93u9Xg+7HEIrSVImnU4fFYvFSj6fV2w2GwkGg65IJBJqVU9AmXalRHtfpRmuRfU+itOGieVdluf/Avxk75BONCeRAAAAAElFTkSuQmCC">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}?v={{ time() }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}?v={{ time() }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('images/logo-icon.png') }}?v={{ time() }}">
@@ -47,8 +46,8 @@
       {{-- Sisi kiri: logo, Sign in / Sign out, toggle tema --}}
       <div class="flex items-center gap-2 sm:gap-3">
         <a href="{{ route('home') }}" class="mr-1 flex items-center gap-2 font-mono text-base font-semibold tracking-tight">
-          <img src="{{ asset('images/logo.png') }}" alt="UI" class="h-6 w-auto dark:hidden" />
-          <img src="{{ asset('images/logo-dark.png') }}" alt="UI" class="hidden h-6 w-auto dark:inline-block" />
+          <img src="{{ asset('images/logo.png') }}" alt="UI" width="22" height="28" loading="eager" class="h-6 w-auto dark:hidden sm:h-7" />
+          <img src="{{ asset('images/logo-dark.png') }}" alt="UI" width="22" height="28" loading="eager" class="hidden h-6 w-auto dark:inline-block sm:h-7" />
           <span>Learn</span>
         </a>
         @guest
@@ -79,6 +78,9 @@
         <button id="theme-toggle" type="button" aria-label="Ganti ke mode cerah" class="flex h-9 w-9 items-center justify-center rounded-md border border-[#363B6C]/15 transition hover:bg-[#363B6C]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3] dark:border-[#EAEDFE]/15 dark:hover:bg-[#EAEDFE]/10">
           <svg class="hidden h-4 w-4 dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+        <button id="grid-toggle" type="button" title="Tampilkan Panduan Grid (Rule of Thirds & Golden Ratio)" aria-label="Tampilkan panduan visual grid" class="hidden h-9 items-center gap-1.5 rounded-md border border-[#363B6C]/15 px-2.5 font-mono text-xs text-[#363B6C] transition hover:bg-[#363B6C]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3] dark:border-[#EAEDFE]/15 dark:text-[#EAEDFE] dark:hover:bg-[#EAEDFE]/10 sm:inline-flex">
+          <span class="text-[#A8A3E3]">▦</span> Grid
         </button>
 
       </div>
@@ -121,9 +123,56 @@
   </main>
 
   <footer class="relative z-10 border-t border-[#363B6C]/10 bg-[#EAEDFE]/60 backdrop-blur-lg dark:border-[#EAEDFE]/10 dark:bg-[#363B6C]/60">
-    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-[#363B6C]/75 dark:text-[#EAEDFE]/70 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-      <p>Copyright © {{ date('Y') }} UIlearn. All rights reserved.</p>
+    <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+      <div class="golden-layout items-start gap-8 border-b border-[#363B6C]/10 pb-8 dark:border-[#EAEDFE]/10">
+        {{-- Sisi Utama (~62% / Konten Utama Golden Ratio) --}}
+        <div>
+          <div class="flex items-center gap-2 font-mono text-base font-semibold tracking-tight">
+            <img src="{{ asset('images/logo.png') }}" alt="UI" width="22" height="28" loading="lazy" class="h-6 w-auto dark:hidden" />
+            <img src="{{ asset('images/logo-dark.png') }}" alt="UI" width="22" height="28" loading="lazy" class="hidden h-6 w-auto dark:inline-block" />
+            <span>Learn</span>
+          </div>
+          <p class="muted mt-3 max-w-[65ch] text-sm leading-relaxed">
+            UIlearn menerapkan prinsip tata letak modern: <strong>Divine Proportion (Golden Ratio 1:1,618)</strong> untuk harmoni spasial, <strong>Rule of Thirds</strong> untuk hierarki titik fokus, dan panjang baris <strong>60–80 karakter</strong> untuk kenyamanan membaca optimal.
+          </p>
+        </div>
+        {{-- Sisi Sidebar (~38% / Pelengkap & Alat Bantu) --}}
+        <div class="space-y-3">
+          <p class="eyebrow">Alat Bantu Desain Web</p>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="https://www.thismanslife.co.uk/phiculator" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 underline-offset-2 hover:underline">
+                <span>Phiculator</span>
+                <span class="muted font-mono">(Kalkulator Golden Ratio) ↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.atrise.com/golden-section/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 underline-offset-2 hover:underline">
+                <span>Golden Section Ratio Tool</span>
+                <span class="muted font-mono">(Grid Generator) ↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-6 flex flex-col gap-2 text-xs text-[#363B6C]/75 dark:text-[#EAEDFE]/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>Copyright © {{ date('Y') }} UIlearn. Jelas, intuitif, dan terstruktur proporsional.</p>
+        <p class="font-mono text-[11px]">Rasio Golden: 1 : 1,618 · Grid 3×3 Rule of Thirds</p>
+      </div>
     </div>
   </footer>
+
+  {{-- Overlay Panduan Visual Grid (Toggle via tombol Grid di header) --}}
+  <div id="composition-grid-overlay" class="pointer-events-none fixed inset-0 z-50 hidden opacity-60" aria-hidden="true">
+    <div class="mx-auto h-full max-w-6xl border-x border-[#A8A3E3]/30 px-4 sm:px-6">
+      <div class="grid h-full grid-cols-3 border-x border-dashed border-[#A8A3E3]/40">
+        <div class="relative border-r border-dashed border-[#A8A3E3]/40">
+          <div class="absolute left-0 top-[33.33%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#A8A3E3] p-1.5 shadow" title="Titik Temu Kiri Atas (F-Pattern Anchor)"></div>
+        </div>
+        <div class="relative border-r border-dashed border-[#A8A3E3]/40"></div>
+        <div class="relative"></div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

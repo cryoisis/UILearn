@@ -37,6 +37,17 @@ export function initLayout() {
         });
     }
 
+    /* Toggle overlay grid panduan (Rule of Thirds & Golden Ratio) */
+    const gridBtn = $('#grid-toggle');
+    const gridOverlay = $('#composition-grid-overlay');
+    if (gridBtn && gridOverlay) {
+        gridBtn.addEventListener('click', () => {
+            const isHidden = gridOverlay.classList.toggle('hidden');
+            gridBtn.classList.toggle('bg-[#363B6C]/10', !isHidden);
+            gridBtn.classList.toggle('dark:bg-[#EAEDFE]/20', !isHidden);
+        });
+    }
+
     /* Dialog konfirmasi (Sign out, hapus akun, dst.): <button data-dialog="id"> membuka <dialog id="id"> */
     $$('[data-dialog]').forEach((btn) =>
         btn.addEventListener('click', () => {

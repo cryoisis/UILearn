@@ -439,4 +439,92 @@ section[id] {
     .mock-before {
         font-family: 'Comic Sans MS', 'Comic Neue', cursive;
     }
+
+    /* ========================================================
+       Ciri Desain Web yang Baik: Golden Ratio & Rule of Thirds
+       ======================================================== */
+    /* 1. Keterbacaan Optimal (60 - 80 karakter per baris) */
+    .prose-optimal {
+        max-width: 68ch;
+        line-height: 1.68;
+    }
+    .prose-optimal p {
+        margin-bottom: 1rem;
+    }
+    .prose-optimal p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 2. Divine Proportion / Golden Ratio (1 : 1.618 ≈ 61.8% / 38.2% atau 5 : 3) */
+    .golden-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    @media (min-width: 1024px) {
+        .golden-layout {
+            grid-template-columns: 1.618fr 1fr;
+            gap: 2rem;
+        }
+    }
+    .golden-layout-reverse {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    @media (min-width: 1024px) {
+        .golden-layout-reverse {
+            grid-template-columns: 1fr 1.618fr;
+            gap: 2rem;
+        }
+    }
+    .golden-layout-5-3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    @media (min-width: 1024px) {
+        .golden-layout-5-3 {
+            grid-template-columns: 5fr 3fr;
+            gap: 2rem;
+        }
+    }
+
+    /* 3. Rule of Thirds (Grid 3x3 dan Titik Temu Kuat / F-Pattern) */
+    .rule-of-thirds-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    @media (min-width: 768px) {
+        .rule-of-thirds-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+    }
+    .f-focal-point {
+        position: relative;
+    }
+    .f-focal-point::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 1.5rem;
+        background-color: #a8a3e3;
+        border-radius: 999px;
+    }
+
+    /* Visual Golden Ratio / Rule of Thirds Guide Box */
+    .grid-guide-box {
+        position: relative;
+        background-image:
+            linear-gradient(to right, rgba(168, 163, 227, 0.12) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(168, 163, 227, 0.12) 1px, transparent 1px);
+        background-size: 33.333% 33.333%;
+    }
+    .golden-box-ratio {
+        aspect-ratio: 1.618 / 1;
+    }
 }

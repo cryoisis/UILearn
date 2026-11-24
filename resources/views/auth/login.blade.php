@@ -3,23 +3,57 @@
 @section('title', 'Sign in — UIlearn')
 
 @section('content')
-<section class="mx-auto flex min-h-[calc(100svh-4rem)] max-w-6xl items-center justify-center px-4 py-16 sm:px-6">
-  <form method="POST" action="{{ route('login') }}" class="glass w-full max-w-md p-6 sm:p-8" novalidate>
-    @csrf
-    <p class="font-mono text-[11px] uppercase tracking-wider text-[#A8A3E3]">Akses member</p>
-    <h1 class="mt-2 text-2xl font-semibold tracking-tight">Selamat datang kembali</h1>
-    <p class="mt-1 text-sm text-[#363B6C]/80 dark:text-[#EAEDFE]/80">Masuk untuk mengerjakan latihan dan memakai AI Chat.</p>
+<section class="mx-auto flex min-h-[calc(100svh-5rem)] max-w-5xl items-center justify-center px-4 py-12 sm:px-6 sm:py-16">
+  {{-- Tata Letak Divine Proportion (Golden Ratio: ~38% Pengantar Kiri Atas / ~62% Formulir Sign In) --}}
+  <div class="glass golden-layout-reverse w-full items-stretch overflow-hidden p-6 sm:p-10 lg:p-12">
+    {{-- Kolom Kiri: Fokus Sudut Kiri Atas (F-Pattern) & Ringkasan Nilai --}}
+    <div class="f-focal-point flex flex-col justify-between border-b border-[#363B6C]/10 pb-6 pl-3 dark:border-[#EAEDFE]/10 sm:pl-4 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
+      <div>
+        <div class="flex items-center gap-2 font-mono text-base font-semibold tracking-tight">
+          <img src="{{ asset('images/logo.png') }}" alt="UI" width="26" height="32" loading="eager" class="h-7 w-auto dark:hidden" />
+          <img src="{{ asset('images/logo-dark.png') }}" alt="UI" width="26" height="32" loading="eager" class="hidden h-7 w-auto dark:inline-block" />
+          <span>Learn</span>
+        </div>
+        <p class="eyebrow mt-4">Akses Member</p>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight">Selamat Datang Kembali</h1>
+        <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
+          Masuk ke akun Anda untuk mengerjakan latihan 10 soal, melacak kemajuan belajar, dan berkonsultasi mengenai proporsi tata letak dengan AI Chat.
+        </p>
+      </div>
 
+      <div class="glass-recessed mt-6 space-y-2 p-4 text-xs leading-relaxed">
+        <p class="font-semibold text-[#5a54a8] dark:text-[#a8a3e3]">📐 Prinsip Desain UIlearn</p>
+        <p class="muted">
+          Dibangun dengan <strong>Divine Proportion (1:1,618)</strong> dan <strong>Rule of Thirds</strong> untuk harmoni visual dan kenyamanan membaca maksimal.
+        </p>
+      </div>
+    </div>
 
-    <label for="email" class="mt-5 block text-xs font-medium">Email</label>
-    <input id="email" name="email" type="email" autocomplete="email" autofocus value="{{ old('email') }}" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
-    @error('email')<p class="mt-1 text-xs text-[#A8A3E3]">{{ $message }}</p>@enderror
-    <label for="password" class="mt-5 block text-xs font-medium">Password</label>
-    <input id="password" name="password" type="password" autocomplete="current-password" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
-    @error('password')<p class="mt-1 text-xs text-[#A8A3E3]">{{ $message }}</p>@enderror
-    <label class="mt-4 flex items-center gap-2 text-sm"><input type="checkbox" name="remember" class="h-4 w-4 accent-[#A8A3E3]"> Ingat saya</label>
-    <button type="submit" class="btn-primary mt-6 w-full">Sign in</button>
-    <p class="mt-5 text-center text-sm text-[#363B6C]/80 dark:text-[#EAEDFE]/80">Belum punya akun? <a href="{{ route('register') }}" class="font-medium underline underline-offset-2 dark:text-[#A8A3E3]">Buat akun an account</a></p>
-  </form>
+    {{-- Kolom Kanan: Form Sign In --}}
+    <form method="POST" action="{{ route('login') }}" class="flex flex-col justify-center pt-6 lg:pt-0" novalidate>
+      @csrf
+      <h2 class="text-xl font-semibold tracking-tight">Masuk ke Akun</h2>
+      <p class="muted prose-optimal mt-1 text-xs">Gunakan kredensial yang telah didaftarkan sebelumnya.</p>
+
+      <label for="email" class="mt-5 block text-xs font-medium">Alamat Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" autofocus value="{{ old('email') }}" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
+      @error('email')<p class="mt-1 text-xs text-[#9b2c4a] dark:text-[#ffb3c4]">{{ $message }}</p>@enderror
+
+      <label for="password" class="mt-4 block text-xs font-medium">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" class="glass-recessed mt-1 w-full px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#A8A3E3]" required>
+      @error('password')<p class="mt-1 text-xs text-[#9b2c4a] dark:text-[#ffb3c4]">{{ $message }}</p>@enderror
+
+      <label class="mt-4 flex items-center gap-2 text-xs">
+        <input type="checkbox" name="remember" class="h-4 w-4 accent-[#A8A3E3]">
+        <span>Ingat sesi saya di perangkat ini</span>
+      </label>
+
+      <button type="submit" data-ripple class="btn-primary mt-6 w-full">Sign in</button>
+
+      <p class="muted mt-5 text-center text-xs">
+        Belum memiliki akun? <a href="{{ route('register') }}" class="font-semibold text-[#363B6C] underline underline-offset-2 hover:text-[#A8A3E3] dark:text-[#EAEDFE]">Daftar gratis di sini</a>
+      </p>
+    </form>
+  </div>
 </section>
 @endsection

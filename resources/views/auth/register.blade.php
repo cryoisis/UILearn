@@ -22,7 +22,7 @@
       </div>
 
       <div class="glass-recessed mt-6 space-y-2 p-4 text-xs leading-relaxed">
-        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">🎯 Keuntungan Bergabung</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Keuntungan Bergabung</p>
         <ul class="muted space-y-1">
           <li>✓ Pelajari Divine Proportion (Golden Ratio 1:1,618)</li>
           <li>✓ Kuasai penempatan elemen dengan Rule of Thirds</li>

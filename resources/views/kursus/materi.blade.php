@@ -45,7 +45,7 @@
           </div>
           @if (!empty($s['tip']))
             <aside class="glass-recessed mt-6 border-l-4 border-l-[#C6C9E7] p-4 text-sm leading-relaxed">
-              <strong>💡 Tips:</strong> {{ $s['tip'] }}
+              <strong>Tips:</strong> {{ $s['tip'] }}
             </aside>
           @endif
         </section>
@@ -157,7 +157,7 @@
 
       {{-- Rule of Thirds Mini Map --}}
       <div class="glass-recessed p-4 text-xs">
-        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">📐 Rule of Thirds</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Rule of Thirds</p>
         <p class="muted mt-1 leading-relaxed">
           Bagi bidang jadi 9 kotak. Perpotongan <strong>kiri atas</strong> adalah titik paling kuat bagi mata karena pola baca huruf F.
         </p>

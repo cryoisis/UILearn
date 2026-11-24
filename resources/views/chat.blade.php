@@ -54,13 +54,13 @@
         <p class="eyebrow">Topik Konsultasi</p>
         <div class="mt-3 space-y-3 text-xs leading-relaxed">
           <div class="glass-recessed p-3">
-            <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">📐 Tata Letak &amp; Proporsi</p>
+            <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Tata Letak &amp; Proporsi</p>
             <p class="muted mt-1">
               "Bagaimana cara membagi kolom pada layar 1200px dengan Golden Ratio 1,62?"
             </p>
           </div>
           <div class="glass-recessed p-3">
-            <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">🎯 Rule of Thirds</p>
+            <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Rule of Thirds</p>
             <p class="muted mt-1">
               "Di mana sebaiknya saya meletakkan formulir login dan tombol CTA utama?"
             </p>
@@ -75,7 +75,7 @@
       </div>
 
       <div class="glass-recessed p-4 text-xs leading-relaxed">
-        <p class="font-semibold text-[#363B6C] dark:text-[#EAEDFE]">💡 Tips Belajar</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#EAEDFE]">Tips Belajar</p>
         <p class="muted mt-1">
           Jangan ragu menanyakan studi kasus desain Anda sendiri. AI dapat memberikan perbandingan solusi sebelum dan sesudah.
         </p>

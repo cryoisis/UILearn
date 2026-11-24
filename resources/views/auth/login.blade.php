@@ -22,7 +22,7 @@
       </div>
 
       <div class="glass-recessed mt-6 space-y-2 p-4 text-xs leading-relaxed">
-        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">📐 Prinsip Desain UIlearn</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Prinsip Desain UIlearn</p>
         <p class="muted">
           Dibangun dengan <strong>Divine Proportion (1:1,618)</strong> dan <strong>Rule of Thirds</strong> untuk harmoni visual dan kenyamanan membaca maksimal.
         </p>

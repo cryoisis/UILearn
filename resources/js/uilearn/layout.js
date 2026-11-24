@@ -37,16 +37,31 @@ export function initLayout() {
         });
     }
 
-    /* Toggle overlay grid panduan (Rule of Thirds & Golden Ratio) */
-    const gridBtn = $('#grid-toggle');
-    const gridOverlay = $('#composition-grid-overlay');
-    if (gridBtn && gridOverlay) {
-        gridBtn.addEventListener('click', () => {
-            const isHidden = gridOverlay.classList.toggle('hidden');
-            gridBtn.classList.toggle('bg-[#363B6C]/10', !isHidden);
-            gridBtn.classList.toggle('dark:bg-[#EAEDFE]/20', !isHidden);
-        });
-    }
+    /* Grid panduan (Rule of Thirds & Golden Ratio): pilihan tersimpan, jadi tetap
+       aktif saat berpindah halaman. Status awal sudah dipulihkan di <head> agar tanpa kedip. */
+    const gridBtns = $$('#grid-toggle, [data-grid-toggle]');
+    const gridOn = () => root.getAttribute('data-grid') === 'on';
+    const paintGrid = () =>
+        gridBtns.forEach((b) => b.setAttribute('aria-pressed', String(gridOn())));
+    paintGrid();
+    gridBtns.forEach((btn) =>
+        btn.addEventListener('click', () => {
+            const next = !gridOn();
+            if (next) root.setAttribute('data-grid', 'on');
+            else root.removeAttribute('data-grid');
+            try {
+                localStorage.setItem('uilearn-grid', next ? 'on' : 'off');
+            } catch {}
+            paintGrid();
+        }),
+    );
+    // sinkron antar tab / jendela
+    window.addEventListener('storage', (e) => {
+        if (e.key !== 'uilearn-grid') return;
+        if (e.newValue === 'on') root.setAttribute('data-grid', 'on');
+        else root.removeAttribute('data-grid');
+        paintGrid();
+    });
 
     /* Dialog konfirmasi (Sign out, hapus akun, dst.): <button data-dialog="id"> membuka <dialog id="id"> */
     $$('[data-dialog]').forEach((btn) =>

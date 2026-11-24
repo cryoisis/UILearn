@@ -114,7 +114,7 @@
       </div>
 
       <div class="glass-recessed p-5 text-xs leading-relaxed">
-        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">📐 Keseimbangan Struktural</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Keseimbangan Struktural</p>
         <p class="muted mt-1">
           Tata letak halaman ini menerapkan proporsi konsisten antara blok utama dan ruang kosong di sekitarnya sehingga memberikan rasa keteraturan alami.
         </p>

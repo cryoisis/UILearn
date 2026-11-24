@@ -21,7 +21,7 @@
           <span class="accent mt-3 block font-mono text-2xl font-medium tracking-tight sm:text-3xl lg:text-4xl">U Learn, I Learn</span>
         </h1>
         {{-- Keterbacaan Optimal: Panjang baris 60 - 80 karakter (max-w-[65ch]) --}}
-        <p class="muted prose-optimal mt-5 text-base leading-relaxed sm:text-lg">
+        <p class="muted prose-optimal mt-5 leading-relaxed sm:text-lg text-base">
           Kuasai fondasi desain web modern: <strong>Divine Proportion (Golden Ratio 1:1,618)</strong>, <strong>Rule of Thirds</strong> untuk penempatan elemen kunci, serta keterbacaan teks ideal <strong>60–80 karakter per baris</strong>.
         </p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -35,66 +35,37 @@
         </div>
       </div>
 
-      {{-- Area Samping (38.2%): Visualisasi Interaktif Golden Ratio & Rule of Thirds --}}
-      <div class="glass-recessed relative rounded-xl border border-[#363B6C]/15 p-5 dark:border-[#EAEDFE]/15">
-        <div class="flex items-center justify-between border-b border-[#363B6C]/10 pb-3 dark:border-[#EAEDFE]/10">
-          <span class="eyebrow">Rasio Harmonik</span>
-          <span class="badge badge-pro">1 : 1,618</span>
-        </div>
-        
-        {{-- Visual Grid 3x3 Rule of Thirds dengan Titik Temu Kiri Atas --}}
-        <div class="mt-4 grid grid-cols-3 gap-1.5 rounded-lg border border-[#C6C9E7]/40 bg-[#363B6C]/5 p-2 dark:bg-[#EAEDFE]/5">
-          <div class="relative flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/50 bg-[#C6C9E7]/20 text-center font-mono text-[10px] font-semibold text-[#363B6C] dark:text-[#eaedfe]">
-            <span class="absolute -bottom-1 -right-1 h-3 w-3 rounded-full bg-[#363B6C] ring-2 ring-[#C6C9E7] dark:bg-[#C6C9E7]" title="Titik Fokus Kiri Atas (Pola F)"></span>
-            Fokus Utama (Pola F)
+      {{-- Area Samping (38.2%): contoh kode layout rasio emas, diketik otomatis + pindah ke preview --}}
+      <div id="gc" class="glass-recessed relative rounded-xl border border-[#363B6C]/15 p-5 dark:border-[#EAEDFE]/15">
+        <div class="mt-4 flex flex-wrap items-center justify-between gap-2">
+          <div class="seg" role="group" aria-label="Tampilan contoh">
+            <button type="button" id="gc-tab-code" aria-pressed="true" class="text-xs">Kode</button>
+            <button type="button" id="gc-tab-preview" aria-pressed="false" class="text-xs">Preview</button>
           </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
-            Navigasi
-          </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
-            Aksi Kanan
-          </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
-            Konten
-          </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
-            Pusat
-          </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
-            Sidebar
-          </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
-            Dukungan
-          </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
-            Status
-          </div>
-          <div class="flex h-14 items-center justify-center rounded border border-dashed border-[#C6C9E7]/30 text-center font-mono text-[10px] opacity-70">
-            Footer
+          <div class="flex gap-2">
+            <button type="button" id="gc-replay" class="btn-ghost !px-2.5 !py-1 text-xs" aria-label="Ulangi animasi mengetik">↻ Ulangi</button>
+            <button type="button" id="gc-copy" class="btn-ghost !px-2.5 !py-1 text-xs">Salin</button>
           </div>
         </div>
 
-        {{-- Kalkulasi Proporsi 960px --}}
-        <div class="mt-4 space-y-2 font-mono text-xs">
-          <div class="flex justify-between text-[#363B6C]/80 dark:text-[#EAEDFE]/80">
-            <span>Contoh Layout 960px:</span>
-            <span class="font-semibold">960 / 1,62</span>
-          </div>
-          <div class="grid grid-cols-[1.618fr_1fr] gap-1 text-[11px]">
-            <div class="rounded bg-[#363B6C] px-2 py-1 text-center font-semibold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">
-              Konten ~593px (61,8%)
+        {{-- Tinggi panel tetap agar tata letak tidak bergeser saat berganti tab --}}
+        <div class="mt-3 h-60">
+          <pre id="gc-code" class="h-full overflow-auto rounded-lg border border-[#363B6C]/15 bg-[#363B6C]/5 p-3 font-mono text-xs leading-relaxed dark:border-[#EAEDFE]/15 dark:bg-[#EAEDFE]/5" aria-label="Contoh kode CSS layout rasio emas"><code id="gc-text"></code><span id="gc-caret" class="ml-px inline-block h-3.5 w-1.5 translate-y-0.5 animate-pulse bg-current" aria-hidden="true"></span></pre>
+
+          <div id="gc-preview" class="hidden h-full flex-col gap-2 rounded-lg border border-[#363B6C]/15 p-3 font-mono text-[11px] dark:border-[#EAEDFE]/15">
+            <div class="rounded border border-[#363B6C]/15 bg-[#C6C9E7]/40 px-2 py-1 text-center dark:border-[#EAEDFE]/15 dark:bg-[#C6C9E7]/20">header</div>
+            <div id="gc-grid" class="grid min-h-0 flex-1 gap-2" style="grid-template-columns: 1fr 1fr">
+              <div class="flex items-center justify-center rounded border border-[#363B6C]/20 bg-[#363B6C] p-2 text-center font-semibold text-[#EAEDFE] transition-all duration-700 dark:border-[#C6C9E7] dark:bg-[#C6C9E7] dark:text-[#363B6C]">.konten<br><span id="gc-w1">50%</span></div>
+              <div class="flex items-center justify-center rounded border border-[#363B6C]/25 p-2 text-center transition-all duration-700 dark:border-[#EAEDFE]/25">.sidebar<br><span id="gc-w2">50%</span></div>
             </div>
-            <div class="rounded border border-[#363B6C]/25 px-2 py-1 text-center dark:border-[#EAEDFE]/25">
-              Sidebar ~367px (38,2%)
-            </div>
+            <p class="muted text-center">Layout 960px: konten ≈ 593px, sidebar ≈ 367px</p>
           </div>
         </div>
 
-        <div class="mt-4 flex items-center justify-between border-t border-[#363B6C]/10 pt-3 text-[11px] dark:border-[#EAEDFE]/10">
-          <span class="muted">Alat bantu hitung:</span>
+        <div class="mt-3 flex items-center justify-between gap-2 border-t border-[#363B6C]/10 pt-3 text-[11px] dark:border-[#EAEDFE]/10">
+          <label class="muted flex items-center gap-1.5"><input id="gc-auto" type="checkbox" checked class="accent-[#363B6C] dark:accent-[#C6C9E7]"> Buka preview otomatis</label>
           <div class="flex gap-2">
             <a href="https://www.thismanslife.co.uk/phiculator" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7]">Phiculator ↗</a>
-            <a href="https://www.atrise.com/golden-section/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7]">Golden Section ↗</a>
           </div>
         </div>
       </div>
@@ -106,8 +77,8 @@
 <section aria-labelledby="principles-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
   <div class="mb-8 max-w-2xl">
     <p class="eyebrow">Prinsip Fundamental</p>
-    <h2 id="principles-title" class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Ciri Desain Web yang Baik</h2>
-    <p class="muted prose-optimal mt-3 text-sm leading-relaxed sm:text-base">
+    <h2 id="principles-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Ciri Desain Web yang Baik</h2>
+    <p class="muted prose-optimal mt-3 leading-relaxed text-base">
       Desain yang efektif mengutamakan kenyamanan psikologis pengguna melalui tiga pilar: kejelasan fungsi, kenyamanan baca, dan keteraturan spasial.
     </p>
   </div>
@@ -117,9 +88,9 @@
     <article class="glass flex flex-col p-6 sm:p-7">
       <div class="flex items-center gap-3">
         <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">01</span>
-        <h3 class="text-xl font-semibold tracking-tight">Jelas dan Intuitif</h3>
+        <h3 class="font-semibold tracking-tight text-xl">Jelas dan Intuitif</h3>
       </div>
-      <p class="muted prose-optimal mt-4 flex-1 text-sm leading-relaxed">
+      <p class="muted prose-optimal mt-4 flex-1 leading-relaxed text-base">
         Desain yang efektif tidak harus selalu penuh warna atau terlihat cantik, melainkan mudah dipahami dan memberikan rasa keteraturan serta kenyamanan alami bagi pengunjung.
       </p>
       <div class="glass-recessed mt-5 p-3 font-mono text-xs text-[#363B6C] dark:text-[#C6C9E7]">
@@ -131,9 +102,9 @@
     <article class="glass flex flex-col p-6 sm:p-7">
       <div class="flex items-center gap-3">
         <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">02</span>
-        <h3 class="text-xl font-semibold tracking-tight">Keterbacaan Optimal</h3>
+        <h3 class="font-semibold tracking-tight text-xl">Keterbacaan Optimal</h3>
       </div>
-      <p class="muted prose-optimal mt-4 flex-1 text-sm leading-relaxed">
+      <p class="muted prose-optimal mt-4 flex-1 leading-relaxed text-base">
         Ukuran tata letak yang proporsional akan membantu menjaga panjang baris teks tetap ideal, yaitu sekitar <strong>60 hingga 80 karakter per baris</strong>, sehingga nyaman dibaca tanpa melelahkan mata.
       </p>
       <div class="glass-recessed mt-5 p-3 font-mono text-xs text-[#363B6C] dark:text-[#C6C9E7]">
@@ -145,9 +116,9 @@
     <article class="glass flex flex-col p-6 sm:p-7">
       <div class="flex items-center gap-3">
         <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">03</span>
-        <h3 class="text-xl font-semibold tracking-tight">Keseimbangan Struktural</h3>
+        <h3 class="font-semibold tracking-tight text-xl">Keseimbangan Struktural</h3>
       </div>
-      <p class="muted prose-optimal mt-4 flex-1 text-sm leading-relaxed">
+      <p class="muted prose-optimal mt-4 flex-1 leading-relaxed text-base">
         Meskipun tidak selalu mengikuti rasio matematis secara kaku, tata letak yang menjaga proporsi konsisten antara blok utama dan ruang kosong (white space) di sekitarnya akan terasa seimbang dan rapi.
       </p>
       <div class="glass-recessed mt-5 p-3 font-mono text-xs text-[#363B6C] dark:text-[#C6C9E7]">
@@ -167,8 +138,8 @@
           <p class="eyebrow">Prinsip 1</p>
           <span class="badge badge-pro">Rasio 1 : 1,618</span>
         </div>
-        <h2 id="golden-section-title" class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Penerapan Divine Proportion (Golden Ratio)</h2>
-        <p class="muted prose-optimal mt-3 text-sm leading-relaxed sm:text-base">
+        <h2 id="golden-section-title" class="mt-2 font-bold tracking-tight text-xl sm:text-2xl">Penerapan Divine Proportion (Golden Ratio)</h2>
+        <p class="muted prose-optimal mt-3 leading-relaxed text-base">
           Prinsip ini menggunakan rasio <strong>1 : 1,618</strong> (sering dibulatkan menjadi <strong>1,62</strong> atau rasio cepat <strong>5 : 3</strong>) untuk menentukan ukuran elemen tata letak agar terasa harmonis secara alami.
         </p>
 
@@ -205,8 +176,8 @@
           <p class="eyebrow">Prinsip 2</p>
           <span class="badge">Grid 3 × 3</span>
         </div>
-        <h2 class="mt-2 text-2xl font-bold tracking-tight">Penerapan Rule of Thirds</h2>
-        <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
+        <h2 class="mt-2 font-bold tracking-tight text-xl sm:text-2xl">Penerapan Rule of Thirds</h2>
+        <p class="muted prose-optimal mt-3 leading-relaxed text-base">
           Aturan ini adalah versi sederhana dari Golden Ratio untuk menonjolkan elemen terpenting tanpa perlu banyak perhitungan rumit.
         </p>
 
@@ -237,8 +208,8 @@
 <section id="ai-demo" aria-labelledby="demo-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
   <div class="mb-8 max-w-2xl">
     <p class="eyebrow">Contoh AI Chat</p>
-    <h2 id="demo-title" class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Bingung soal desain? Tanya saja.</h2>
-    <p class="muted prose-optimal mt-3 text-sm leading-relaxed sm:text-base">Pilih salah satu pertanyaan di bawah untuk melihat bagaimana AI membantu Anda memahami tata letak proporsional.</p>
+    <h2 id="demo-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Bingung soal desain? Tanya saja.</h2>
+    <p class="muted prose-optimal mt-3 leading-relaxed text-base">Pilih salah satu pertanyaan di bawah untuk melihat bagaimana AI membantu Anda memahami tata letak proporsional.</p>
   </div>
   
   <div class="glass p-5 sm:p-7">
@@ -266,7 +237,7 @@
           </div>
         </div>
         <div class="border-t border-[#363B6C]/10 pt-3 text-xs leading-relaxed text-[#363B6C]/75 dark:border-[#EAEDFE]/10 dark:text-[#EAEDFE]/70">
-          💡 AI dapat membantu menghitung Golden Ratio layout Anda, memeriksa kontras warna WCAG AA, dan merekomendasikan skala typography.
+          AI dapat membantu menghitung Golden Ratio layout Anda, memeriksa kontras warna WCAG AA, dan merekomendasikan skala typography.
         </div>
       </div>
     </div>
@@ -278,8 +249,8 @@
 <section aria-labelledby="compare-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
   <div class="mb-8 max-w-2xl">
     <p class="eyebrow">Perbandingan Nyata</p>
-    <h2 id="compare-title" class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Sebelum dan Sesudah Menerapkan Prinsip</h2>
-    <p class="muted prose-optimal mt-3 text-sm leading-relaxed sm:text-base">
+    <h2 id="compare-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Sebelum dan Sesudah Menerapkan Prinsip</h2>
+    <p class="muted prose-optimal mt-3 leading-relaxed text-base">
       Isi dan fungsinya sama persis. Yang berubah adalah penerapan Divine Proportion (Golden Ratio), Rule of Thirds (fokus kiri atas), dan keterbacaan baris teks 60–80 karakter.
     </p>
   </div>
@@ -327,7 +298,7 @@
     ] as [$t, $d])
       <li class="glass-recessed p-4">
         <p class="text-sm font-semibold">{{ $t }}</p>
-        <p class="muted prose-optimal mt-1 text-sm">{{ $d }}</p>
+        <p class="muted prose-optimal mt-1 text-base">{{ $d }}</p>
       </li>
     @endforeach
   </ul>
@@ -337,8 +308,8 @@
 <section id="materi" aria-labelledby="courses-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
   <div class="mb-8 max-w-2xl">
     <p class="eyebrow">Materi Belajar</p>
-    <h2 id="courses-title" class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Pilih Topik untuk Dipelajari</h2>
-    <p class="muted prose-optimal mt-2 text-sm sm:text-base">Tiga pilar dasar yang wajib dipahami sebelum merancang antarmuka profesional.</p>
+    <h2 id="courses-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Pilih Topik untuk Dipelajari</h2>
+    <p class="muted prose-optimal mt-2 text-base">Tiga pilar dasar yang wajib dipahami sebelum merancang antarmuka profesional.</p>
   </div>
   <div class="rule-of-thirds-grid">
     @foreach ($courses as $slug => $c)
@@ -347,8 +318,8 @@
           <span class="accent font-mono text-3xl" aria-hidden="true">{{ $c['icon'] }}</span>
           <span class="muted font-mono text-xs">{{ $c['duration'] }}</span>
         </div>
-        <h3 class="mt-4 text-xl font-semibold tracking-tight">{{ $c['title'] }}</h3>
-        <p class="muted prose-optimal mt-2 flex-1 text-sm leading-relaxed">{{ $c['tagline'] }}</p>
+        <h3 class="mt-4 font-semibold tracking-tight text-xl">{{ $c['title'] }}</h3>
+        <p class="muted prose-optimal mt-2 flex-1 leading-relaxed text-base">{{ $c['tagline'] }}</p>
         <p class="accent mt-4 font-mono text-xs font-semibold">Mulai belajar <span aria-hidden="true" class="inline-block transition group-hover:translate-x-1">→</span></p>
       </a>
     @endforeach
@@ -363,8 +334,8 @@
   <div class="glass golden-layout items-center p-6 sm:p-8">
     <div class="f-focal-point pl-3 sm:pl-4">
       <p class="eyebrow">Tentang UIlearn</p>
-      <h2 id="about-short-title" class="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">Belajar UI/UX Tanpa Merasa Kewalahan</h2>
-      <p class="muted prose-optimal mt-3 text-sm leading-relaxed sm:text-base">
+      <h2 id="about-short-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Belajar UI/UX Tanpa Merasa Kewalahan</h2>
+      <p class="muted prose-optimal mt-3 leading-relaxed text-base">
         UIlearn dirancang khusus bagi pemula. Materinya padat dan berbobot, mengupas tuntas rasio matematis seperti Golden Ratio 1:1,618, komposisi Rule of Thirds, hingga latihan interaktif yang dinilai langsung secara otomatis.
       </p>
     </div>
@@ -382,8 +353,8 @@
       {{-- Kolom Kiri (~62%) --}}
       <div class="border-b border-[#363B6C]/10 p-6 dark:border-[#EAEDFE]/10 md:p-8 lg:border-b-0 lg:border-r">
         <p class="eyebrow">Kenapa jadi member?</p>
-        <h2 id="join-title" class="mt-3 text-balance text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">Buka kursus lengkap dan AI Chat.</h2>
-        <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
+        <h2 id="join-title" class="mt-3 text-balance font-semibold leading-snug tracking-tight text-xl sm:text-2xl">Buka kursus lengkap dan AI Chat.</h2>
+        <p class="muted prose-optimal mt-3 leading-relaxed text-base">
           Tanpa login Anda bisa membaca materi. Dengan akun gratis Anda bisa mengerjakan latihan dan mencoba AI Chat. Bantuan AI saat latihan tersedia di paket Free dengan batas pesan dan jeda 30 menit; paket Pro membukanya tanpa batas.
         </p>
         <div class="mt-6 flex flex-col gap-3 sm:flex-row">

@@ -56,36 +56,36 @@
 
       {{-- Sisi kanan: tautan halaman --}}
       <div class="flex items-center gap-4">
-        <ul class="hidden items-center gap-6 text-sm text-[#363B6C]/85 dark:text-[#EAEDFE]/85 md:flex">
+        {{-- Desktop links: only show when there's enough room --}}
+        <ul class="hidden items-center gap-6 text-sm text-[#363B6C]/85 dark:text-[#EAEDFE]/85 lg:flex">
           @foreach ($nav as [$key, $label, $url, $match])
             <li><a class="{{ $link }} {{ request()->routeIs(...explode('|', $match)) ? 'font-semibold underline decoration-[#C6C9E7] decoration-2 underline-offset-8' : '' }}" href="{{ $url }}" @if(request()->routeIs(...explode('|', $match))) aria-current="page" @endif>{{ $label }}</a></li>
           @endforeach
         </ul>
         @auth
-          <a href="{{ route('profile') }}" class="hidden max-w-[10rem] items-center gap-2 truncate font-mono text-xs text-[#363B6C]/80 transition hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7] dark:text-[#EAEDFE]/80 sm:inline-flex" title="Profile">
+          <a href="{{ route('profile') }}" class="hidden max-w-[10rem] items-center gap-2 truncate font-mono text-xs text-[#363B6C]/80 transition hover:text-[#363B6C]/60 dark:hover:text-[#C6C9E7] dark:text-[#EAEDFE]/80 lg:inline-flex" title="Profile">
             {{ auth()->user()->name }}
             <span class="badge {{ auth()->user()->isPro() ? 'badge-pro' : '' }}">{{ auth()->user()->isPro() ? 'Pro' : 'Free' }}</span>
           </a>
-        @else
-          <a href="{{ route('register') }}" data-ripple class="btn-primary hidden !py-2 sm:inline-flex">Join</a>
+        
         @endauth
-        <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu" class="flex h-9 w-9 items-center justify-center rounded-md border border-[#363B6C]/15 dark:border-[#EAEDFE]/15 md:hidden">
+        <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu"class="btn-ghost">
           <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
-        <button id="theme-toggle" type="button" aria-label="Ganti ke mode cerah" class="flex h-9 w-9 items-center justify-center rounded-md border border-[#363B6C]/15 transition hover:bg-[#363B6C]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7] dark:border-[#EAEDFE]/15 dark:hover:bg-[#EAEDFE]/10">
+        <button id="theme-toggle" type="button" aria-label="Ganti ke mode cerah" class="btn-ghost">
           <svg class="hidden h-4 w-4 dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         </button>
-        <button id="grid-toggle" type="button" title="Tampilkan Panduan Grid (Rule of Thirds & Golden Ratio)" aria-label="Tampilkan panduan visual grid" class="hidden h-9 items-center gap-1.5 rounded-md border border-[#363B6C]/15 px-2.5 font-mono text-xs text-[#363B6C] transition hover:bg-[#363B6C]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C6C9E7] dark:border-[#EAEDFE]/15 dark:text-[#EAEDFE] dark:hover:bg-[#EAEDFE]/10 sm:inline-flex">
-          <span class="text-[#363B6C] dark:text-[#C6C9E7]">▦</span> Grid
+        <button id="grid-toggle" type="button" title="Tampilkan Panduan Grid (Rule of Thirds & Golden Ratio)" aria-label="Tampilkan panduan visual grid" class="btn-ghost">
+          <span></span> Grid
         </button>
 
       </div>
     </nav>
-    <div id="mobile-menu" class="hidden border-t border-[#363B6C]/10 px-4 pb-4 dark:border-[#EAEDFE]/10 md:hidden">
+    <div id="mobile-menu" class="hidden border-t border-[#363B6C]/10 px-4 pb-4 dark:border-[#EAEDFE]/10 lg:hidden">
       <ul class="flex flex-col gap-1 pt-3 text-sm">
         @foreach ($nav as [$key, $label, $url, $match])
-          <li><a class="block rounded-md px-3 py-2 hover:bg-[#363B6C]/5 dark:hover:bg-[#EAEDFE]/10" href="{{ $url }}">{{ $label }}</a></li>
+          <li><a class="block rounded-md px-3 py-2 hover:bg-[#363B6C]/5 dark:hover:bg-[#EAEDFE]/10 {{ request()->routeIs(...explode('|', $match)) ? 'font-semibold' : '' }}" href="{{ $url }}">{{ $label }}</a></li>
         @endforeach
         @auth
           <li><a class="block rounded-md px-3 py-2 hover:bg-[#363B6C]/5 dark:hover:bg-[#EAEDFE]/10" href="{{ route('profile') }}">Profile ({{ auth()->user()->name }})</a></li>

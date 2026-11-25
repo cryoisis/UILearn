@@ -15,10 +15,9 @@
          KONTEN UTAMA (61.8% / Divine Proportion Main Block)
          ======================================================== --}}
     <main class="space-y-8">
-      {{-- Header Materi dengan Fokus Sudut Kiri Atas (F-Pattern) --}}
-      <header class="glass f-focal-point p-6 sm:p-8">
-        <p class="eyebrow">Materi Pembelajaran · {{ $course['duration'] }}</p>
-        <h1 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{{ $course['title'] }}</h1>
+      {{-- Header Materi --}}
+      <header class="glass p-6 sm:p-8">
+        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{{ $course['title'] }}</h1>
         {{-- Keterbacaan Optimal 60 - 80 Karakter per Baris --}}
         <p class="muted prose-optimal mt-4 text-base leading-relaxed sm:text-lg">{{ $course['intro'] }}</p>
         

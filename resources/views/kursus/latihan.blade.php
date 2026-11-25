@@ -34,9 +34,8 @@
     {{-- Kolom Utama: Kuis Latihan (61.8%) --}}
     <main class="space-y-6">
       {{-- 1. Petunjuk Pengerjaan --}}
-      <section id="ex-intro" class="glass f-focal-point p-6 sm:p-8" aria-labelledby="ex-title">
-        <p class="eyebrow">Kuis Interaktif · 10 Soal</p>
-        <h1 id="ex-title" tabindex="-1" class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Latihan {{ $course['title'] }}</h1>
+      <section id="ex-intro" class="glass p-6 sm:p-8" aria-labelledby="ex-title">
+        <h1 id="ex-title" tabindex="-1" class="text-3xl font-bold tracking-tight sm:text-4xl">Latihan {{ $course['title'] }}</h1>
         <p class="muted prose-optimal mt-3 text-sm leading-relaxed sm:text-base">
           Uji pemahaman Anda mengenai prinsip tata letak web, Divine Proportion (Golden Ratio), Rule of Thirds, dan keterbacaan optimal.
         </p>

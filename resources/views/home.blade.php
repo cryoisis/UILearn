@@ -7,12 +7,9 @@
 <section aria-labelledby="hero-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
   <div class="glass overflow-hidden p-6 sm:p-10 lg:p-12">
     <div class="golden-layout items-center">
-      {{-- Area Utama (61.8%): Titik Fokus Sudut Kiri Atas mengikuti Pola F (F-Pattern) --}}
-      <div class="f-focal-point pl-3 sm:pl-4">
-        <div class="eyebrow">
-          @auth Halo, {{ auth()->user()->name }} · Selamat belajar @else Belajar UI/UX untuk Pemula @endauth
-        </div>
-        <h1 id="hero-title" class="mt-3 tracking-tight">
+      {{-- Area Utama (61.8%): Konten Utama --}}
+      <div>
+        <h1 id="hero-title" class="tracking-tight">
           <span class="inline-flex items-center gap-3 text-4xl font-bold sm:gap-4 sm:text-5xl lg:text-6xl">
             <img src="{{ asset('images/logo.png') }}" alt="UI" width="74" height="96" loading="eager" class="h-12 w-auto drop-shadow-sm dark:hidden sm:h-16 lg:h-20" />
             <img src="{{ asset('images/logo-dark.png') }}" alt="UI" width="74" height="96" loading="eager" class="hidden h-12 w-auto drop-shadow-sm dark:inline-block sm:h-16 lg:h-20" />
@@ -76,8 +73,7 @@
 {{-- 2. Ciri Desain Web yang Baik (Rule of Thirds: 3 Kolom Seimbang) --}}
 <section aria-labelledby="principles-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
   <div class="mb-8 max-w-2xl">
-    <p class="eyebrow">Prinsip Fundamental</p>
-    <h2 id="principles-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Ciri Desain Web yang Baik</h2>
+    <h2 id="principles-title" class="font-semibold tracking-tight text-xl sm:text-2xl">Ciri Desain Web yang Baik</h2>
     <p class="muted prose-optimal mt-3 leading-relaxed text-base">
       Desain yang efektif mengutamakan kenyamanan psikologis pengguna melalui tiga pilar: kejelasan fungsi, kenyamanan baca, dan keteraturan spasial.
     </p>
@@ -207,8 +203,7 @@
 {{-- 4. Contoh interaksi AI (preset) dengan Golden Ratio Layout --}}
 <section id="ai-demo" aria-labelledby="demo-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
   <div class="mb-8 max-w-2xl">
-    <p class="eyebrow">Contoh AI Chat</p>
-    <h2 id="demo-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Bingung soal desain? Tanya saja.</h2>
+    <h2 id="demo-title" class="font-semibold tracking-tight text-xl sm:text-2xl">Bingung soal desain? Tanya saja.</h2>
     <p class="muted prose-optimal mt-3 leading-relaxed text-base">Pilih salah satu pertanyaan di bawah untuk melihat bagaimana AI membantu Anda memahami tata letak proporsional.</p>
   </div>
   
@@ -248,8 +243,7 @@
 {{-- 5. Sebelum & sesudah belajar UI/UX --}}
 <section aria-labelledby="compare-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
   <div class="mb-8 max-w-2xl">
-    <p class="eyebrow">Perbandingan Nyata</p>
-    <h2 id="compare-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Sebelum dan Sesudah Menerapkan Prinsip</h2>
+    <h2 id="compare-title" class="font-semibold tracking-tight text-xl sm:text-2xl">Sebelum dan Sesudah Menerapkan Prinsip</h2>
     <p class="muted prose-optimal mt-3 leading-relaxed text-base">
       Isi dan fungsinya sama persis. Yang berubah adalah penerapan Divine Proportion (Golden Ratio), Rule of Thirds (fokus kiri atas), dan keterbacaan baris teks 60–80 karakter.
     </p>
@@ -307,8 +301,7 @@
 {{-- 6. Pilihan materi (Rule of Thirds: 3 Kolom) --}}
 <section id="materi" aria-labelledby="courses-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
   <div class="mb-8 max-w-2xl">
-    <p class="eyebrow">Materi Belajar</p>
-    <h2 id="courses-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Pilih Topik untuk Dipelajari</h2>
+    <h2 id="courses-title" class="font-semibold tracking-tight text-xl sm:text-2xl">Pilih Topik untuk Dipelajari</h2>
     <p class="muted prose-optimal mt-2 text-base">Tiga pilar dasar yang wajib dipahami sebelum merancang antarmuka profesional.</p>
   </div>
   <div class="rule-of-thirds-grid">
@@ -332,9 +325,8 @@
 {{-- 7. About singkat dalam Golden Proportion (~62% Deskripsi / ~38% CTA) --}}
 <section aria-labelledby="about-short-title" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
   <div class="glass golden-layout items-center p-6 sm:p-8">
-    <div class="f-focal-point pl-3 sm:pl-4">
-      <p class="eyebrow">Tentang UIlearn</p>
-      <h2 id="about-short-title" class="mt-2 font-semibold tracking-tight text-xl sm:text-2xl">Belajar UI/UX Tanpa Merasa Kewalahan</h2>
+    <div>
+      <h2 id="about-short-title" class="font-semibold tracking-tight text-xl sm:text-2xl">Belajar UI/UX Tanpa Merasa Kewalahan</h2>
       <p class="muted prose-optimal mt-3 leading-relaxed text-base">
         UIlearn dirancang khusus bagi pemula. Materinya padat dan berbobot, mengupas tuntas rasio matematis seperti Golden Ratio 1:1,618, komposisi Rule of Thirds, hingga latihan interaktif yang dinilai langsung secara otomatis.
       </p>

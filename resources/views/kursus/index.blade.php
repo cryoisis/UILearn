@@ -4,14 +4,15 @@
 
 @section('content')
 <div class="mx-auto max-w-6xl space-y-8 px-4 py-10 sm:px-6 sm:py-14">
-  {{-- Header dengan Fokus Sudut Kiri Atas (F-Pattern) & Keterbacaan Optimal (60-80 Karakter) --}}
-  <header class="f-focal-point pl-3 sm:pl-4">
-    <p class="eyebrow">Kurikulum UIlearn</p>
-    <h1 class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Pilih Materi Belajar</h1>
-    <p class="muted prose-optimal mt-4 text-base leading-relaxed sm:text-lg">
-      Setiap topik dirancang dengan prinsip desain terstruktur: materi padat, FAQ mendalam, dan 10 latihan bertahap (5 mudah, 5 sedang) yang menerapkan Divine Proportion dan Rule of Thirds.
-    </p>
-  </header>
+  {{-- Header Halaman --}}
+  <div class="glass overflow-hidden p-6 sm:p-10 lg:p-12">
+    <header class="border-0">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Pilih Materi Belajar</h1>
+      <p class="muted prose-optimal mt-4 leading-relaxed sm:text-lg text-base">
+        Setiap topik dirancang dengan prinsip desain terstruktur: materi padat, FAQ mendalam, dan 10 latihan bertahap (5 mudah, 5 sedang) yang menerapkan Divine Proportion dan Rule of Thirds.
+      </p>
+    </header>
+  </div>
 
   {{-- Tata Letak Golden Ratio (61,8% Kursus Utama / 38,2% Panduan Proporsi & Alat Bantu) --}}
   <div class="golden-layout items-start gap-8">
@@ -26,8 +27,8 @@
                 {{ $slug === 'tata-letak' ? 'Golden Ratio & 3×3 Grid' : $c['duration'] }}
               </span>
             </div>
-            <h2 class="mt-4 text-2xl font-semibold tracking-tight">{{ $c['title'] }}</h2>
-            <p class="muted prose-optimal mt-2 flex-1 text-sm leading-relaxed">{{ $c['tagline'] }}</p>
+            <h2 class="mt-4 font-semibold tracking-tight text-xl sm:text-2xl">{{ $c['title'] }}</h2>
+            <p class="muted prose-optimal mt-2 flex-1 leading-relaxed text-base">{{ $c['tagline'] }}</p>
             
             <div class="glass-recessed mt-5 flex flex-wrap items-center justify-between gap-2 p-3 font-mono text-xs">
               <span>{{ count($c['sections']) }} Bagian Materi</span>
@@ -64,8 +65,8 @@
           <p class="eyebrow">Aturan Tata Letak</p>
           <span class="badge badge-pro">1 : 1,618</span>
         </div>
-        <h3 class="mt-3 text-lg font-semibold tracking-tight">Divine Proportion (Golden Ratio)</h3>
-        <p class="muted prose-optimal mt-2 text-xs leading-relaxed">
+        <h3 class="mt-3 font-semibold tracking-tight text-xl">Divine Proportion (Golden Ratio)</h3>
+        <p class="muted prose-optimal mt-2 leading-relaxed text-base">
           Gunakan rasio <strong>1 : 1,618</strong> (dibulatkan <strong>1,62</strong> atau <strong>5 : 3</strong>) untuk membagi bidang secara harmonis.
         </p>
 
@@ -81,7 +82,7 @@
         </div>
 
         <h4 class="mt-5 text-sm font-semibold tracking-tight">Rule of Thirds (Aturan Sepertiga)</h4>
-        <p class="muted prose-optimal mt-1 text-xs leading-relaxed">
+        <p class="muted prose-optimal mt-1 leading-relaxed text-base">
           Bagi bidang menjadi <strong>9 bagian</strong> (3x3). Tempatkan elemen kunci di 4 titik perpotongan, dengan prioritas <strong>sudut kiri atas</strong> mengikuti pola pemindaian huruf "F" (F-pattern).
         </p>
 
@@ -106,7 +107,7 @@
 
       {{-- Tips Keterbacaan --}}
       <aside class="glass-recessed p-5 text-xs leading-relaxed">
-        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Keterbacaan Optimal</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">💡 Keterbacaan Optimal</p>
         <p class="muted mt-1">
           Jaga panjang baris teks antara <strong>60 hingga 80 karakter per baris</strong>. Jika teks terlalu lebar, mata pembaca kesulitan melompat ke baris baru.
         </p>

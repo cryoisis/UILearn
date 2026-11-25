@@ -4,13 +4,14 @@
 
 @section('content')
 <section class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-  {{-- Header Halaman dengan Fokus Sudut Kiri Atas (F-Pattern) --}}
-  <div class="f-focal-point mb-6 pl-3 sm:pl-4">
-    <p class="eyebrow">Asisten Desain Antarmuka</p>
-    <h1 class="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">AI Chat UIlearn</h1>
-    <p class="muted prose-optimal mt-1 text-xs leading-relaxed sm:text-sm">
-      Konsultasikan tata letak, kalkulasi Golden Ratio (1:1,618), penataan Rule of Thirds, dan palet warna dengan AI pendamping.
-    </p>
+  {{-- Header Halaman --}}
+  <div class="glass mb-6 overflow-hidden rounded-xl border border-[#363B6C]/20 bg-[#C6C9E7]/50 p-6 shadow-lg dark:border-[#EAEDFE]/20 dark:bg-[#EAEDFE]/12 sm:p-8">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight sm:text-3xl">AI Chat UIlearn</h1>
+      <p class="muted prose-optimal mt-2 leading-relaxed text-base">
+        Konsultasikan tata letak, kalkulasi Golden Ratio (1:1,618), penataan Rule of Thirds, dan palet warna dengan AI pendamping.
+      </p>
+    </div>
   </div>
 
   {{-- Tata Letak Divine Proportion: Area Percakapan (61.8%) & Panel Saran (38.2%) --}}
@@ -66,7 +67,7 @@
             </p>
           </div>
           <div class="glass-recessed p-3">
-            <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">👁️ Keterbacaan Optimal</p>
+            <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Keterbacaan Optimal</p>
             <p class="muted mt-1">
               "Berapa ukuran font dan line-height ideal untuk panjang teks 70 karakter?"
             </p>

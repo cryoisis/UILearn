@@ -7,13 +7,12 @@
   {{-- 1. Hero dengan Divine Proportion (Golden Ratio 61.8% Konten / 38.2% Visual) --}}
   <section aria-labelledby="about-title" class="glass overflow-hidden p-6 sm:p-10 lg:p-12">
     <div class="golden-layout items-center">
-      {{-- Area Utama: Fokus Sudut Kiri Atas (F-Pattern) --}}
-      <div class="f-focal-point pl-3 sm:pl-4">
-        <p class="eyebrow">Tentang UIlearn</p>
-        <h1 id="about-title" class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+      {{-- Area Utama --}}
+      <div>
+        <h1 id="about-title" class="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
           U Learn, <span class="accent font-mono font-medium">I Learn</span>
         </h1>
-        <p class="muted prose-optimal mt-4 text-base leading-relaxed sm:text-lg">
+        <p class="muted prose-optimal mt-4 leading-relaxed sm:text-lg text-base">
           UIlearn adalah platform edukasi desain web antarmuka (UI/UX) yang dirancang untuk pemula. Kami percaya bahwa desain yang efektif tidak berakar pada selera subjektif semata, melainkan berpijak pada rasio harmonis alami dan psikologi persepsi visual.
         </p>
         <div class="mt-6 flex flex-wrap gap-2 text-xs">
@@ -48,9 +47,8 @@
   {{-- 2. Ciri Desain Web yang Baik (Rule of Thirds: 3 Kolom) --}}
   <section aria-labelledby="web-features-title">
     <div class="mb-6 max-w-2xl">
-      <p class="eyebrow">Standar Kualitas</p>
-      <h2 id="web-features-title" class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Ciri Desain Web yang Baik</h2>
-      <p class="muted prose-optimal mt-2 text-sm sm:text-base">
+      <h2 id="web-features-title" class="font-bold tracking-tight text-xl sm:text-2xl">Ciri Desain Web yang Baik</h2>
+      <p class="muted prose-optimal mt-2 text-base">
         Desain antarmuka yang berhasil selalu memiliki karakteristik fundamental yang konsisten:
       </p>
     </div>
@@ -59,9 +57,9 @@
       <article class="glass p-6">
         <div class="flex items-center gap-3">
           <span class="flex h-9 w-9 items-center justify-center rounded-md bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">1</span>
-          <h3 class="text-lg font-semibold">Jelas dan Intuitif</h3>
+          <h3 class="font-semibold text-xl">Jelas dan Intuitif</h3>
         </div>
-        <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
+        <p class="muted prose-optimal mt-3 leading-relaxed text-base">
           Desain yang efektif tidak harus selalu penuh warna atau terlihat cantik, melainkan mudah dipahami dan memberikan rasa keteraturan serta kenyamanan alami bagi pengunjung.
         </p>
       </article>
@@ -69,9 +67,9 @@
       <article class="glass p-6">
         <div class="flex items-center gap-3">
           <span class="flex h-9 w-9 items-center justify-center rounded-md bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">2</span>
-          <h3 class="text-lg font-semibold">Keterbacaan Optimal</h3>
+          <h3 class="font-semibold text-xl">Keterbacaan Optimal</h3>
         </div>
-        <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
+        <p class="muted prose-optimal mt-3 leading-relaxed text-base">
           Ukuran tata letak yang proporsional akan membantu menjaga panjang baris teks tetap ideal, yaitu sekitar <strong>60 hingga 80 karakter per baris</strong>, sehingga nyaman dibaca tanpa membuat mata cepat lelah.
         </p>
       </article>
@@ -79,9 +77,9 @@
       <article class="glass p-6">
         <div class="flex items-center gap-3">
           <span class="flex h-9 w-9 items-center justify-center rounded-md bg-[#363B6C] font-mono text-sm font-bold text-[#EAEDFE] dark:bg-[#C6C9E7] dark:text-[#363B6C]">3</span>
-          <h3 class="text-lg font-semibold">Keseimbangan Struktural</h3>
+          <h3 class="font-semibold text-xl">Keseimbangan Struktural</h3>
         </div>
-        <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
+        <p class="muted prose-optimal mt-3 leading-relaxed text-base">
           Meskipun tidak selalu mengikuti rasio matematis secara kaku, tata letak yang menjaga proporsi konsisten antara blok utama dan ruang kosong (white space) di sekitarnya akan terasa seimbang dan rapi.
         </p>
       </article>
@@ -90,15 +88,14 @@
 
   {{-- 3. Dua Pilar Penerapan: Golden Ratio & Rule of Thirds --}}
   <section aria-labelledby="math-principles-title" class="glass p-6 sm:p-8">
-    <p class="eyebrow">Dua Pilar Penerapan</p>
-    <h2 id="math-principles-title" class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Penerapan Matematis &amp; Komposisi</h2>
+    <h2 id="math-principles-title" class="font-bold tracking-tight text-xl sm:text-2xl">Penerapan Matematis &amp; Komposisi</h2>
     
     <div class="golden-layout mt-6 items-stretch gap-6">
       {{-- Pilar 1: Divine Proportion --}}
       <div class="glass-recessed flex flex-col justify-between p-5 sm:p-6">
         <div>
-          <h3 class="text-xl font-semibold tracking-tight">1. Penerapan Divine Proportion (Golden Ratio)</h3>
-          <p class="muted prose-optimal mt-2 text-sm leading-relaxed">
+          <h3 class="font-semibold tracking-tight text-xl">1. Penerapan Divine Proportion (Golden Ratio)</h3>
+          <p class="muted prose-optimal mt-2 leading-relaxed text-base">
             Prinsip ini menggunakan rasio <strong>1 : 1,618</strong> (sering dibulatkan menjadi <strong>1,62</strong> atau rasio cepat <strong>5 : 3</strong>) untuk menentukan ukuran elemen tata letak agar terasa harmonis secara alami.
           </p>
           <div class="mt-4 space-y-2 text-xs">
@@ -120,8 +117,8 @@
       {{-- Pilar 2: Rule of Thirds --}}
       <div class="glass-recessed flex flex-col justify-between p-5 sm:p-6">
         <div>
-          <h3 class="text-xl font-semibold tracking-tight">2. Penerapan Rule of Thirds</h3>
-          <p class="muted prose-optimal mt-2 text-sm leading-relaxed">
+          <h3 class="font-semibold tracking-tight text-xl">2. Penerapan Rule of Thirds</h3>
+          <p class="muted prose-optimal mt-2 leading-relaxed text-base">
             Aturan ini adalah versi sederhana dari Golden Ratio untuk menonjolkan elemen terpenting tanpa perlu banyak perhitungan rumit.
           </p>
           <ul class="mt-4 space-y-2.5 text-xs leading-relaxed">
@@ -140,8 +137,7 @@
   {{-- 4. Kompetensi yang Dicapai --}}
   <section aria-labelledby="skills-title">
     <div class="mb-6 max-w-2xl">
-      <p class="eyebrow">Capaian Pembelajaran</p>
-      <h2 id="skills-title" class="mt-2 text-2xl font-bold tracking-tight">Kompetensi yang Dapat Dicapai</h2>
+      <h2 id="skills-title" class="font-bold tracking-tight text-xl sm:text-2xl">Kompetensi yang Dapat Dicapai</h2>
     </div>
     
     <div class="rule-of-thirds-grid">
@@ -170,7 +166,7 @@
             <span class="accent font-mono text-2xl" aria-hidden="true">{{ $c['icon'] }}</span>
             <span class="badge">{{ $c['duration'] }}</span>
           </div>
-          <h3 class="mt-3 text-xl font-semibold tracking-tight">{{ $c['title'] }}</h3>
+          <h3 class="mt-3 font-semibold tracking-tight text-xl">{{ $c['title'] }}</h3>
           <ul class="mt-4 flex-1 list-disc space-y-2 pl-4 text-xs leading-relaxed text-[#363B6C]/85 dark:text-[#EAEDFE]/85">
             @foreach ($skills[$slug] as $s)
               <li>{{ $s }}</li>
@@ -185,8 +181,7 @@
   {{-- 5. Cara Belajar --}}
   <section aria-labelledby="how-title">
     <div class="mb-6 max-w-2xl">
-      <p class="eyebrow">Metode Edukasi</p>
-      <h2 id="how-title" class="mt-2 text-2xl font-bold tracking-tight">Cara Belajar di UIlearn</h2>
+      <h2 id="how-title" class="font-bold tracking-tight text-xl sm:text-2xl">Cara Belajar di UIlearn</h2>
     </div>
     <ol class="rule-of-thirds-grid">
       @foreach ([
@@ -196,8 +191,8 @@
       ] as [$n, $t, $d])
         <li class="glass p-6">
           <p class="accent font-mono text-sm font-bold">{{ $n }}</p>
-          <h3 class="mt-2 text-lg font-semibold tracking-tight">{{ $t }}</h3>
-          <p class="muted prose-optimal mt-2 text-sm leading-relaxed">{{ $d }}</p>
+          <h3 class="mt-2 font-semibold tracking-tight text-xl">{{ $t }}</h3>
+          <p class="muted prose-optimal mt-2 leading-relaxed text-base">{{ $d }}</p>
         </li>
       @endforeach
     </ol>

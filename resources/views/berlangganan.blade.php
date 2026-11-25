@@ -9,14 +9,15 @@
   $freeLimit = $plans['free']['daily_ai_messages'];
 @endphp
 <div class="mx-auto max-w-6xl space-y-10 px-4 py-10 sm:px-6 sm:py-14">
-  {{-- Header dengan Fokus Sudut Kiri Atas (F-Pattern) & Keterbacaan Optimal --}}
-  <header class="f-focal-point pl-3 sm:pl-4">
-    <p class="eyebrow">Investasi Belajar</p>
-    <h1 class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Pilih Paket Belajar Anda</h1>
-    <p class="muted prose-optimal mt-4 text-base leading-relaxed sm:text-lg">
-      Mulai gratis untuk mempelajari teori dan mengerjakan latihan. Upgrade ke paket Pro untuk mendapatkan bimbingan AI tanpa batas kapan pun Anda membutuhkan arahan desain.
-    </p>
-  </header>
+  {{-- Header Halaman --}}
+  <div class="glass overflow-hidden p-6 sm:p-10 lg:p-12">
+    <header class="border-0">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Pilih Paket Belajar Anda</h1>
+      <p class="muted prose-optimal mt-4 leading-relaxed sm:text-lg text-base">
+        Mulai gratis untuk mempelajari teori dan mengerjakan latihan. Upgrade ke paket Pro untuk mendapatkan bimbingan AI tanpa batas kapan pun Anda membutuhkan arahan desain.
+      </p>
+    </header>
+  </div>
 
   @if ($status === 'upgraded')
     <div role="status" class="glass flex items-center gap-3 px-5 py-3 text-sm">
@@ -36,7 +37,7 @@
     <article class="glass flex flex-col justify-between p-6 sm:p-8 {{ $current === 'free' ? 'ring-2 ring-[#C6C9E7]' : '' }}" aria-labelledby="plan-free">
       <div>
         <div class="flex items-center justify-between">
-          <h2 id="plan-free" class="text-2xl font-bold tracking-tight">Free</h2>
+          <h2 id="plan-free" class="font-bold tracking-tight text-xl sm:text-2xl">Free</h2>
           @if ($current === 'free')<span class="badge">Paket Anda</span>@endif
         </div>
         <p class="mt-3 text-3xl font-extrabold">Rp0</p>
@@ -77,7 +78,7 @@
     <article class="glass relative flex flex-col justify-between p-6 sm:p-8 {{ $current === 'pro' ? 'ring-2 ring-[#C6C9E7]' : 'border-[#C6C9E7]' }}" aria-labelledby="plan-pro">
       <div>
         <div class="flex items-center justify-between">
-          <h2 id="plan-pro" class="text-2xl font-bold tracking-tight">Pro</h2>
+          <h2 id="plan-pro" class="font-bold tracking-tight text-xl sm:text-2xl">Pro</h2>
           @if ($current === 'pro')
             <span class="badge badge-pro">Paket Anda</span>
           @else
@@ -124,7 +125,7 @@
     {{-- Tabel (61.8%) --}}
     <section aria-labelledby="diff-title" class="glass overflow-hidden">
       <div class="border-b border-[#363B6C]/10 px-6 py-4 dark:border-[#EAEDFE]/10">
-        <h2 id="diff-title" class="text-lg font-semibold tracking-tight">Perbandingan Detail Fitur</h2>
+        <h2 id="diff-title" class="font-semibold tracking-tight text-xl sm:text-2xl">Perbandingan Detail Fitur</h2>
       </div>
       <div class="overflow-x-auto">
         <table class="w-full min-w-[380px] border-collapse text-left text-sm">
@@ -164,12 +165,12 @@
     {{-- Info Samping / Garansi (38.2%) --}}
     <aside class="glass space-y-4 p-6">
       <p class="eyebrow">Keamanan &amp; Kualitas</p>
-      <h3 class="text-base font-semibold">Belajar Mandiri dengan Dukungan Nyata</h3>
-      <p class="muted prose-optimal text-xs leading-relaxed">
+      <h3 class="font-semibold text-xl">Belajar Mandiri dengan Dukungan Nyata</h3>
+      <p class="muted prose-optimal leading-relaxed text-base">
         Setiap kurikulum di UIlearn disusun berdasarkan standar industri dan prinsip estetika matematis. Upgrade Anda membantu kami terus mengembangkan materi terbaru.
       </p>
       <div class="glass-recessed p-3 font-mono text-[11px] leading-relaxed">
-        💳 Transaksi aman &amp; instan. Akun Pro langsung aktif setelah pembayaran dikonfirmasi.
+        Transaksi aman &amp; instan. Akun Pro langsung aktif setelah pembayaran dikonfirmasi.
       </div>
     </aside>
   </div>
@@ -179,7 +180,7 @@
   <dialog id="upgrade-dialog" class="confirm-dialog" aria-labelledby="up-title">
     <form method="POST" action="{{ route('subscription.upgrade') }}" class="p-6">
       @csrf
-      <h2 id="up-title" class="text-lg font-semibold">Upgrade ke Pro?</h2>
+      <h2 id="up-title" class="font-semibold text-xl sm:text-2xl">Upgrade ke Pro?</h2>
       <p class="muted mt-2 text-sm">Total: {{ $price }}. AI Chat tanpa batas dan bantuan AI saat latihan langsung aktif.</p>
       @if (config('app.debug'))
         <p class="mt-3 rounded-md border border-dashed border-current p-2 text-xs">Mode pengembangan: pembayaran disimulasikan. Hubungkan ke payment gateway sebelum rilis.</p>
@@ -193,7 +194,7 @@
   <dialog id="downgrade-dialog" class="confirm-dialog" aria-labelledby="down-title">
     <form method="POST" action="{{ route('subscription.downgrade') }}" class="p-6">
       @csrf
-      <h2 id="down-title" class="text-lg font-semibold">Kembali ke Free?</h2>
+      <h2 id="down-title" class="font-semibold text-xl sm:text-2xl">Kembali ke Free?</h2>
       <p class="muted mt-2 text-sm">AI Chat akan dibatasi {{ $freeLimit }} pesan per hari dan bantuan AI saat latihan dibatasi {{ config('uilearn.plans.free.exercise_ai_messages', 5) }} pesan, lalu jeda 30 menit.</p>
       <div class="mt-6 flex justify-end gap-2">
         <button type="button" class="btn-secondary" data-close>Batal</button>

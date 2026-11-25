@@ -6,16 +6,15 @@
 <section class="mx-auto flex min-h-[calc(100svh-5rem)] max-w-5xl items-center justify-center px-4 py-12 sm:px-6 sm:py-16">
   {{-- Tata Letak Divine Proportion (Golden Ratio: ~38% Pengantar Kiri Atas / ~62% Formulir Register) --}}
   <div class="glass golden-layout-reverse w-full items-stretch overflow-hidden p-6 sm:p-10 lg:p-12">
-    {{-- Kolom Kiri: Fokus Sudut Kiri Atas (F-Pattern) & Ringkasan Nilai --}}
-    <div class="f-focal-point flex flex-col justify-between border-b border-[#363B6C]/10 pb-6 pl-3 dark:border-[#EAEDFE]/10 sm:pl-4 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
+    {{-- Kolom Kiri --}}
+    <div class="flex flex-col justify-between border-b border-[#363B6C]/10 pb-6 dark:border-[#EAEDFE]/10 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
       <div>
         <div class="flex items-center gap-2 font-mono text-base font-semibold tracking-tight">
           <img src="{{ asset('images/logo.png') }}" alt="UI" width="26" height="32" loading="eager" class="h-7 w-auto dark:hidden" />
           <img src="{{ asset('images/logo-dark.png') }}" alt="UI" width="26" height="32" loading="eager" class="hidden h-7 w-auto dark:inline-block" />
           <span>Learn</span>
         </div>
-        <p class="eyebrow mt-4">Bergabung Bersama Kami</p>
-        <h1 class="mt-2 text-3xl font-bold tracking-tight">Buat Akun Anda</h1>
+        <h1 class="mt-4 text-3xl font-bold tracking-tight">Buat Akun Anda</h1>
         <p class="muted prose-optimal mt-3 text-sm leading-relaxed">
           100% Gratis. Akun baru otomatis mendapatkan paket Free dengan akses penuh ke materi, kuis 10 soal, dan konsultasi AI harian.
         </p>

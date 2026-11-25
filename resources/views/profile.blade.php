@@ -11,14 +11,13 @@
 @endphp
 
 <div class="mx-auto max-w-6xl space-y-8 px-4 py-10 sm:px-6 sm:py-14">
-  {{-- Header Profil dengan Fokus Sudut Kiri Atas (F-Pattern) --}}
-  <header class="glass f-focal-point overflow-hidden p-6 sm:p-8">
+  {{-- Header Profil --}}
+  <header class="glass overflow-hidden p-6 sm:p-8">
     <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
       <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[#363B6C] font-mono text-2xl font-bold text-[#EAEDFE] ring-4 ring-[#C6C9E7]/40 dark:bg-[#EAEDFE]/10" aria-hidden="true">
         {{ $initials ?: '?' }}
       </div>
       <div class="min-w-0 flex-1">
-        <p class="eyebrow">Pengaturan Akun</p>
         <h1 id="profile-title" class="truncate text-3xl font-bold tracking-tight sm:text-4xl">{{ $user->name }}</h1>
         <p class="muted mt-1 truncate font-mono text-sm">{{ $user->email }}</p>
       </div>

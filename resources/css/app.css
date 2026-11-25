@@ -578,22 +578,6 @@ section[id] {
             gap: 1.5rem;
         }
     }
-    .f-focal-point {
-        position: relative;
-    }
-    .f-focal-point::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 3px;
-        height: 1.5rem;
-        background-color: #363b6c;
-        border-radius: 999px;
-    }
-    .dark .f-focal-point::before {
-        background-color: #c6c9e7;
-    }
 
     /* Visual Golden Ratio / Rule of Thirds Guide Box */
     .grid-guide-box {

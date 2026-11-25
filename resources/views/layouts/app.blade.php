@@ -129,9 +129,6 @@
             <img src="{{ asset('images/logo-dark.png') }}" alt="UI" width="22" height="28" loading="lazy" class="hidden h-6 w-auto dark:inline-block" />
             <span>Learn</span>
           </div>
-          <p class="muted mt-3 max-w-[65ch] text-sm leading-relaxed">
-            UIlearn menerapkan prinsip tata letak modern: <strong>Divine Proportion (Golden Ratio 1:1,618)</strong> untuk harmoni spasial, <strong>Rule of Thirds</strong> untuk hierarki titik fokus, dan panjang baris <strong>60–80 karakter</strong> untuk kenyamanan membaca optimal.
-          </p>
         </div>
         {{-- Sisi Sidebar (~38% / Pelengkap & Alat Bantu) --}}
         <div class="space-y-3">

@@ -154,22 +154,6 @@
         </div>
       </div>
 
-      {{-- Rule of Thirds Mini Map --}}
-      <div class="glass-recessed p-4 text-xs">
-        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Rule of Thirds</p>
-        <p class="muted mt-1 leading-relaxed">
-          Bagi bidang jadi 9 kotak. Perpotongan <strong>kiri atas</strong> adalah titik paling kuat bagi mata karena pola baca huruf F.
-        </p>
-      </div>
-
-      {{-- Tombol Latihan --}}
-      <div class="glass p-5 text-center">
-        <p class="text-xs font-semibold uppercase tracking-wider text-[#363B6C] dark:text-[#C6C9E7]">Uji Pemahaman</p>
-        <p class="muted mt-1 text-xs">10 soal latihan (5 mudah &amp; 5 sedang).</p>
-        <a href="{{ route('exercise', $slug) }}" data-ripple class="btn-primary mt-3 w-full">
-          @guest Masuk untuk Latihan @else Mulai Latihan @endguest
-        </a>
-      </div>
     </aside>
   </div>
 </div>

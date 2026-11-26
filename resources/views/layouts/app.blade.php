@@ -151,7 +151,7 @@
       </div>
       <div class="mt-6 flex flex-col gap-2 text-xs text-[#363B6C]/75 dark:text-[#EAEDFE]/70 sm:flex-row sm:items-center sm:justify-between">
         <p>Copyright © {{ date('Y') }} UIlearn. Jelas, intuitif, dan terstruktur proporsional.</p>
-        <p class="font-mono text-[11px]">Rasio Golden: 1 : 1,618 · Grid 3×3 Rule of Thirds</p>
+        <p class="font-mono text-[11px]">Kontak: UI.Learn@gmail.com</p>
       </div>
     </div>
   </footer>

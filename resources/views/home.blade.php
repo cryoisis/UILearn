@@ -33,7 +33,7 @@
       </div>
 
       {{-- Area Samping (38.2%): contoh kode layout rasio emas, diketik otomatis + pindah ke preview --}}
-      <div id="gc" class="glass-recessed relative rounded-xl border border-[#363B6C]/15 p-5 dark:border-[#EAEDFE]/15">
+      <div id="gc" class="glass-recessed relative min-w-0 rounded-xl border border-[#363B6C]/15 p-5 dark:border-[#EAEDFE]/15">
         <div class="mt-4 flex flex-wrap items-center justify-between gap-2">
           <div class="seg" role="group" aria-label="Tampilan contoh">
             <button type="button" id="gc-tab-code" aria-pressed="true" class="text-xs">Kode</button>

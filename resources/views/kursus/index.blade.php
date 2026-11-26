@@ -107,7 +107,7 @@
 
       {{-- Tips Keterbacaan --}}
       <aside class="glass-recessed p-5 text-xs leading-relaxed">
-        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">💡 Keterbacaan Optimal</p>
+        <p class="font-semibold text-[#363B6C] dark:text-[#C6C9E7]">Keterbacaan Optimal</p>
         <p class="muted mt-1">
           Jaga panjang baris teks antara <strong>60 hingga 80 karakter per baris</strong>. Jika teks terlalu lebar, mata pembaca kesulitan melompat ke baris baru.
         </p>
